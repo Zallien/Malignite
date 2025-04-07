@@ -10542,6 +10542,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -10619,6 +10623,7 @@
           "value": false
         },
         {
+          "folded": true,
           "name": "EnemiesHealthperSecond",
           "type": "structure",
           "children": [
@@ -10680,6 +10685,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "EnemiesSizeperSecond",
           "type": "structure",
           "children": [
@@ -10738,6 +10744,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "EnemySize",
           "type": "structure",
           "children": [
@@ -10759,6 +10766,7 @@
           ]
         },
         {
+          "folded": true,
           "name": "EnemyHealth",
           "type": "structure",
           "children": [
@@ -22408,6 +22416,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "GolemAi",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24270,7 +24279,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Skill Indicators",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24513,6 +24521,7 @@
           "colorG": 6,
           "colorR": 80,
           "creationTime": 0,
+          "folded": true,
           "name": "Pause and Stats",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -25232,7 +25241,7 @@
           "isLocked": false,
           "name": "",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [
             {
               "defaultSize": true,
@@ -25276,7 +25285,7 @@
           "isLocked": false,
           "name": "UI",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -25309,7 +25318,7 @@
           "isLocked": false,
           "name": "Game Over",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -26691,6 +26700,10 @@
         {
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         },
         {
           "name": "Resizable",
@@ -29842,6 +29855,10 @@
           "type": "PathfindingBehavior::PathfindingBehavior"
         },
         {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -30398,6 +30415,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -30821,7 +30842,7 @@
                 "loadingvalue",
                 "100",
                 "\"easeInOutExpo\"",
-                "5",
+                "1",
                 ""
               ]
             },
@@ -30849,6 +30870,26 @@
                 "1",
                 "",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PlayerStats.Level",
+                "=",
+                "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Exp",
+                "=",
+                "10"
               ]
             }
           ]
@@ -30971,6 +31012,10 @@
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -31020,7 +31065,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6040838749989196,
+        "zoomFactor": 0.6244537826600346,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -31046,6 +31091,11 @@
               "value": "I’m sorry, Quakehart. But I have no choice... I will free you, even if it means breaking my own heart."
             }
           ]
+        },
+        {
+          "name": "IDforHolders",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -31934,8 +31984,8 @@
           "name": "expbar",
           "persistentUuid": "b8e11c9e-581e-4362-840d-32dcc55a76c6",
           "width": 1040,
-          "x": 10,
-          "y": 10,
+          "x": -2,
+          "y": 6,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -31951,8 +32001,8 @@
           "name": "panel",
           "persistentUuid": "20d44aa5-9065-41b8-bc52-743a827b1323",
           "width": 1392,
-          "x": -38,
-          "y": -70,
+          "x": -54,
+          "y": -74,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -31967,8 +32017,8 @@
           "name": "PowerupsHolders",
           "persistentUuid": "cf4f1a55-21e9-437d-adde-f8af23940381",
           "width": 0,
-          "x": 218,
-          "y": 330,
+          "x": 206,
+          "y": 326,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -31983,8 +32033,8 @@
           "name": "PowerupsHolders",
           "persistentUuid": "05ae7f99-efe3-4e6c-8a2a-a618462fb1f5",
           "width": 0,
-          "x": 666,
-          "y": 330,
+          "x": 654,
+          "y": 326,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -32005,8 +32055,8 @@
           "name": "PowerupsHolders",
           "persistentUuid": "11f68754-58ce-40b6-a17d-b2f9c822a522",
           "width": 0,
-          "x": 1082,
-          "y": 330,
+          "x": 1070,
+          "y": 326,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -32028,8 +32078,8 @@
           "name": "ProfileHandle",
           "persistentUuid": "f3cd2193-e1ca-4090-9bd2-82db836640c6",
           "width": 80,
-          "x": 26,
-          "y": 58,
+          "x": 14,
+          "y": 54,
           "zOrder": 24,
           "numberProperties": [],
           "stringProperties": [],
@@ -32045,8 +32095,8 @@
           "name": "healthbar",
           "persistentUuid": "2e07f4ad-23e1-4e4e-982f-6bcbf237358b",
           "width": 256,
-          "x": 74,
-          "y": 90,
+          "x": 62,
+          "y": 86,
           "zOrder": 23,
           "numberProperties": [],
           "stringProperties": [],
@@ -32062,8 +32112,8 @@
           "name": "icon",
           "persistentUuid": "5c891f50-2650-46fb-b2ac-16c8d1d05219",
           "width": 48,
-          "x": 42,
-          "y": 74,
+          "x": 30,
+          "y": 70,
           "zOrder": 25,
           "numberProperties": [],
           "stringProperties": [],
@@ -32079,8 +32129,8 @@
           "name": "boss_name",
           "persistentUuid": "bb4c124f-8203-4f69-aa78-b5c9687a8840",
           "width": 405,
-          "x": 797,
-          "y": 553,
+          "x": 785,
+          "y": 549,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -32096,8 +32146,8 @@
           "name": "tagline",
           "persistentUuid": "726ee822-a1dc-41a8-b972-d116d6cb6e3b",
           "width": 384,
-          "x": 886,
-          "y": 610,
+          "x": 874,
+          "y": 606,
           "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
@@ -32112,8 +32162,8 @@
           "name": "bossname_for_health",
           "persistentUuid": "bb004c66-3755-48c1-81da-fc8bd75fb673",
           "width": 0,
-          "x": 595,
-          "y": 55,
+          "x": 583,
+          "y": 51,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -32129,8 +32179,8 @@
           "name": "charname_",
           "persistentUuid": "f9d5b2bb-bdb1-4f71-b35b-8ae18a764061",
           "width": 190,
-          "x": 106,
-          "y": 85,
+          "x": 94,
+          "y": 81,
           "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
@@ -32146,8 +32196,8 @@
           "name": "labelforpups",
           "persistentUuid": "89cd17e2-0705-489a-886e-092777d02aea",
           "width": 240,
-          "x": 106,
-          "y": 426,
+          "x": 94,
+          "y": 422,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -32163,8 +32213,8 @@
           "name": "labelforpups",
           "persistentUuid": "be629012-ed74-4a50-ac06-eb220fcb731e",
           "width": 240,
-          "x": 554,
-          "y": 426,
+          "x": 542,
+          "y": 422,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -32186,8 +32236,8 @@
           "name": "labelforpups",
           "persistentUuid": "93816360-a891-4dc4-b410-b0fd4b3630b4",
           "width": 240,
-          "x": 970,
-          "y": 426,
+          "x": 958,
+          "y": 422,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -32209,8 +32259,8 @@
           "name": "pausebutton",
           "persistentUuid": "5525e0c4-c97c-4292-91b2-45ff15c9a426",
           "width": 48,
-          "x": 42,
-          "y": 138,
+          "x": 30,
+          "y": 134,
           "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
@@ -32226,8 +32276,8 @@
           "name": "icon2",
           "persistentUuid": "1ea15f7e-4b95-4c8e-89d8-fe1c4bc374ec",
           "width": 32,
-          "x": 50,
-          "y": 145,
+          "x": 38,
+          "y": 141,
           "zOrder": 33,
           "numberProperties": [],
           "stringProperties": [],
@@ -32243,8 +32293,8 @@
           "name": "NewPanelSprite2",
           "persistentUuid": "5514abe0-d726-47f5-bc89-d3df9af65279",
           "width": 704,
-          "x": 313,
-          "y": 154,
+          "x": 301,
+          "y": 150,
           "zOrder": 34,
           "numberProperties": [],
           "stringProperties": [],
@@ -32260,8 +32310,8 @@
           "name": "statslabel",
           "persistentUuid": "ecffac22-0281-4045-8272-566f30a634ec",
           "width": 64,
-          "x": 809,
-          "y": 194,
+          "x": 797,
+          "y": 190,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32283,8 +32333,8 @@
           "name": "statslabel",
           "persistentUuid": "254c1214-85fd-470b-8e37-70597f686d72",
           "width": 176,
-          "x": 697,
-          "y": 218,
+          "x": 685,
+          "y": 214,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32306,8 +32356,8 @@
           "name": "statslabel",
           "persistentUuid": "6742e8d5-ce59-47fd-8d90-c49baf2f15fd",
           "width": 176,
-          "x": 697,
-          "y": 242,
+          "x": 685,
+          "y": 238,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32329,8 +32379,8 @@
           "name": "statslabel",
           "persistentUuid": "73cb4d21-d224-4fc8-ad16-5305a7ab8b6f",
           "width": 176,
-          "x": 697,
-          "y": 266,
+          "x": 685,
+          "y": 262,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32352,8 +32402,8 @@
           "name": "statslabel",
           "persistentUuid": "a810849e-566f-4855-a5ef-0540b8684ce7",
           "width": 176,
-          "x": 697,
-          "y": 290,
+          "x": 685,
+          "y": 286,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32375,8 +32425,8 @@
           "name": "statslabel",
           "persistentUuid": "b5cf29c2-8e4f-44d3-a5fe-dc876ccdeb99",
           "width": 176,
-          "x": 697,
-          "y": 314,
+          "x": 685,
+          "y": 310,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32397,8 +32447,8 @@
           "name": "backbutton",
           "persistentUuid": "5aff3975-31d5-4010-a5c0-a9e795076d20",
           "width": 0,
-          "x": 969,
-          "y": 170,
+          "x": 957,
+          "y": 166,
           "zOrder": 36,
           "numberProperties": [],
           "stringProperties": [],
@@ -32414,8 +32464,8 @@
           "name": "backicon",
           "persistentUuid": "c2069c49-4f79-4b79-be7c-1a60b4b09e3c",
           "width": 32,
-          "x": 969,
-          "y": 170,
+          "x": 957,
+          "y": 166,
           "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
@@ -32431,8 +32481,8 @@
           "name": "statsvalue",
           "persistentUuid": "7dd4680d-95ce-4aca-8e55-24b6f433e844",
           "width": 112,
-          "x": 889,
-          "y": 218,
+          "x": 877,
+          "y": 214,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32448,8 +32498,8 @@
           "name": "statsvalue",
           "persistentUuid": "c7217e2d-172d-4ccb-b60f-b7a3ac658c09",
           "width": 112,
-          "x": 889,
-          "y": 242,
+          "x": 877,
+          "y": 238,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32471,8 +32521,8 @@
           "name": "statsvalue",
           "persistentUuid": "38b19ec0-2740-4361-96e5-a034836862bd",
           "width": 112,
-          "x": 889,
-          "y": 266,
+          "x": 877,
+          "y": 262,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32494,8 +32544,8 @@
           "name": "statsvalue",
           "persistentUuid": "613ee4b0-e974-4041-8811-6e2ac7c860f3",
           "width": 112,
-          "x": 889,
-          "y": 290,
+          "x": 877,
+          "y": 286,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32517,8 +32567,8 @@
           "name": "statsvalue",
           "persistentUuid": "a9332505-d77b-4cfb-b654-284d3a9c05ad",
           "width": 112,
-          "x": 889,
-          "y": 314,
+          "x": 877,
+          "y": 310,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32540,8 +32590,8 @@
           "name": "backgroundforstats",
           "persistentUuid": "74d8f608-d82c-4db3-b04e-8b073a178907",
           "width": 240,
-          "x": 377,
-          "y": 218,
+          "x": 365,
+          "y": 214,
           "zOrder": 39,
           "numberProperties": [],
           "stringProperties": [],
@@ -32557,8 +32607,8 @@
           "name": "statslabel",
           "persistentUuid": "469b65ef-9da4-4e92-94af-1f0a7e4dfb2b",
           "width": 128,
-          "x": 393,
-          "y": 210,
+          "x": 381,
+          "y": 206,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32580,8 +32630,8 @@
           "name": "statsvalue",
           "persistentUuid": "1f0e28e4-1dbd-44a2-8bd6-3b6ec8614e9e",
           "width": 64,
-          "x": 537,
-          "y": 210,
+          "x": 525,
+          "y": 206,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32603,8 +32653,8 @@
           "name": "statslabel",
           "persistentUuid": "bbf317ba-f3e0-41cc-96d6-3538653e8880",
           "width": 176,
-          "x": 697,
-          "y": 338,
+          "x": 685,
+          "y": 334,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32626,8 +32676,8 @@
           "name": "statsvalue",
           "persistentUuid": "4cfbae96-a748-4bb6-af2c-cfab77bd6cae",
           "width": 112,
-          "x": 889,
-          "y": 338,
+          "x": 877,
+          "y": 334,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32648,8 +32698,8 @@
           "name": "chooseforpowerups",
           "persistentUuid": "9f3e0bfb-3fbd-4d93-8684-de077baa4155",
           "width": 0,
-          "x": 506,
-          "y": 122,
+          "x": 494,
+          "y": 118,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -32665,8 +32715,8 @@
           "name": "playeravatar",
           "persistentUuid": "f084ddf3-7281-485a-bd54-4cae447dd6e3",
           "width": 336,
-          "x": 497,
-          "y": 354,
+          "x": 485,
+          "y": 350,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -32682,8 +32732,8 @@
           "name": "statslabel",
           "persistentUuid": "8970dec4-967a-4642-9d95-7bc07b83d1a0",
           "width": 96,
-          "x": 393,
-          "y": 498,
+          "x": 381,
+          "y": 494,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32705,8 +32755,8 @@
           "name": "statslabel",
           "persistentUuid": "43fd18da-9e7e-48c3-b212-806b859caaaf",
           "width": 112,
-          "x": 393,
-          "y": 522,
+          "x": 381,
+          "y": 518,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32728,8 +32778,8 @@
           "name": "statsvalue",
           "persistentUuid": "e55b84dc-151a-48b1-81d8-9f2784696915",
           "width": 80,
-          "x": 521,
-          "y": 498,
+          "x": 509,
+          "y": 494,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32751,8 +32801,8 @@
           "name": "statsvalue",
           "persistentUuid": "232c7da7-c4f4-4e28-b6f8-c3a5ee7f91bc",
           "width": 80,
-          "x": 521,
-          "y": 522,
+          "x": 509,
+          "y": 518,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32774,8 +32824,8 @@
           "name": "skillindicator",
           "persistentUuid": "6c42f380-c416-4782-a655-cf670fb2568e",
           "width": 48,
-          "x": 26,
-          "y": 570,
+          "x": 14,
+          "y": 566,
           "zOrder": 41,
           "numberProperties": [],
           "stringProperties": [],
@@ -32791,8 +32841,8 @@
           "name": "skill_1_icon",
           "persistentUuid": "a14e6b1c-031a-4591-a0fc-80a6bf53fbe4",
           "width": 32,
-          "x": 32,
-          "y": 575,
+          "x": 20,
+          "y": 571,
           "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
@@ -32808,8 +32858,8 @@
           "name": "skillletter",
           "persistentUuid": "5f2a3cb0-7e3f-4597-85e7-9da99433f7f3",
           "width": 80,
-          "x": 74,
-          "y": 584,
+          "x": 62,
+          "y": 580,
           "zOrder": 43,
           "numberProperties": [],
           "stringProperties": [],
@@ -32831,8 +32881,8 @@
           "name": "skillname",
           "persistentUuid": "3692dcc9-000f-48da-8a1a-38d249f83864",
           "width": 144,
-          "x": 74,
-          "y": 603,
+          "x": 62,
+          "y": 599,
           "zOrder": 44,
           "numberProperties": [],
           "stringProperties": [],
@@ -32854,8 +32904,8 @@
           "name": "statslabel",
           "persistentUuid": "f0d33c9e-550c-4df7-b67b-e20937e61e46",
           "width": 176,
-          "x": 697,
-          "y": 362,
+          "x": 685,
+          "y": 358,
           "zOrder": 35,
           "numberProperties": [],
           "stringProperties": [],
@@ -32877,8 +32927,8 @@
           "name": "statsvalue",
           "persistentUuid": "b79bcfa8-77f9-45f6-986d-e86a20060586",
           "width": 112,
-          "x": 889,
-          "y": 362,
+          "x": 877,
+          "y": 358,
           "zOrder": 38,
           "numberProperties": [],
           "stringProperties": [],
@@ -32900,8 +32950,8 @@
           "name": "yougot_text",
           "persistentUuid": "1138981a-4645-4a58-9c66-62313d3f063a",
           "width": 1276,
-          "x": 13,
-          "y": 658,
+          "x": 1,
+          "y": 654,
           "zOrder": 58,
           "numberProperties": [],
           "stringProperties": [],
@@ -34607,17 +34657,6 @@
             },
             {
               "type": {
-                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
-              },
-              "parameters": [
-                "expbar",
-                "=",
-                "Max_Exp",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
@@ -34733,14 +34772,6 @@
                 "value": "Cache"
               },
               "parameters": [
-                "labelforpups"
-              ]
-            },
-            {
-              "type": {
-                "value": "Cache"
-              },
-              "parameters": [
                 "boss_name"
               ]
             },
@@ -34754,8 +34785,2409 @@
                 "=",
                 "0"
               ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Max_Exp",
+                "=",
+                "ExprequiredperLevel[PlayerStats.Level]"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+              },
+              "parameters": [
+                "expbar",
+                "=",
+                "Max_Exp",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "expbar",
+                "=",
+                "16",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetWidth"
+              },
+              "parameters": [
+                "expbar",
+                "Resizable",
+                "=",
+                "SceneWindowWidth() + 32"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Exp",
+                "=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "GamePause",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "panel",
+                "Tween",
+                "\"choosePowerup\"",
+                "0",
+                "\"linear\"",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "PowerUps",
+                "Tween",
+                "\"showpowerups\"",
+                "0",
+                "\"linear\"",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "labelforpups",
+                "Tween",
+                "\"showpowerups\"",
+                "0",
+                "\"linear\"",
+                "1",
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"playerlife_Seconds\""
+              ]
             }
           ]
+        },
+        {
+          "colorB": 153,
+          "colorG": 68,
+          "colorR": 9,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Character Exp Progression",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "PlayerStats.Level",
+                    "!=",
+                    "20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "False",
+                    "="
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Exp",
+                        ">=",
+                        "Max_Exp"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenCameraZoom2"
+                      },
+                      "parameters": [
+                        "",
+                        "\"pausezoom in\"",
+                        "3.5",
+                        "",
+                        "\"linear\"",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "Exp",
+                            ">=",
+                            "Max_Exp"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "panel",
+                            "Tween",
+                            "\"choosePowerup\"",
+                            "150",
+                            "\"linear\"",
+                            "1",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "OpacityCapability::OpacityBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "PowerupsHolders",
+                            "Opacity",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "3",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetStringVariable"
+                          },
+                          "parameters": [
+                            "Type",
+                            "=",
+                            "PowerUps2[RandomInRange(0,VariableChildCount(PowerUps2) - 1)]"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Health\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomInRange(PowerUps_Value.Health[0], PowerUps_Value.Health[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Damage\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomInRange(PowerUps_Value.Damage[0], PowerUps_Value.Damage[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Armor\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomFloatInRange(PowerUps_Value.Armor[0], PowerUps_Value.Armor[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Range\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomInRange(PowerUps_Value.Range[0], PowerUps_Value.Range[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Agility\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomFloatInRange(PowerUps_Value.Agility[0], PowerUps_Value.Agility[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Regen\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Value",
+                                "=",
+                                "RandomFloatInRange(PowerUps_Value.Regen[0], PowerUps_Value.Regen[1])"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "DoneRandomizing",
+                                "True",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "PowerupsHolders",
+                                "ID",
+                                "=",
+                                "IDforHolders"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "PowerUps",
+                                "PowerupsHolders.X()",
+                                "PowerupsHolders.Y()",
+                                "\"UI\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "PowerUps",
+                                "Scale",
+                                "=",
+                                "4"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                              },
+                              "parameters": [
+                                "PowerUps",
+                                "Animation",
+                                "=",
+                                "Type"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetStringObjectVariable"
+                              },
+                              "parameters": [
+                                "PowerUps",
+                                "Type",
+                                "=",
+                                "Type"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberObjectVariable"
+                              },
+                              "parameters": [
+                                "PowerUps",
+                                "Quantity",
+                                "=",
+                                "Value"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "labelforpups",
+                                "ID",
+                                "=",
+                                "IDforHolders"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Agility\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "labelforpups",
+                                "Text",
+                                "=",
+                                "\"Plus \" + ToString(roundTo(Value,2)) +  \" of \" + Type"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "IDforHolders",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "NumberObjectVariable"
+                              },
+                              "parameters": [
+                                "labelforpups",
+                                "ID",
+                                "=",
+                                "IDforHolders"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            },
+                            {
+                              "type": {
+                                "value": "StringVariable"
+                              },
+                              "parameters": [
+                                "Type",
+                                "=",
+                                "\"Agility\""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "labelforpups",
+                                "Text",
+                                "=",
+                                "\"Reduce \" + ToString(roundTo(Value,2))+ \" of \" + Type"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "IDforHolders",
+                                "+",
+                                "1"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "IDforHolders",
+                            ">=",
+                            "3"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "IDforHolders",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "DoneRandomizing",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "PowerUps",
+                            "Tween",
+                            "\"showpowerups\"",
+                            "255",
+                            "\"linear\"",
+                            "3",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "labelforpups",
+                            "Tween",
+                            "\"showpowerups\"",
+                            "255",
+                            "\"linear\"",
+                            "2",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Montre"
+                          },
+                          "parameters": [
+                            "chooseforpowerups",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "DonePicking",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "labelforpups",
+                            "Tween",
+                            "\"showpowerups\"",
+                            "0",
+                            "\"linear\"",
+                            "1",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "PowerUps",
+                            "Tween",
+                            "\"showpowerups\"",
+                            "0",
+                            "\"linear\"",
+                            "1",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "panel",
+                            "Tween",
+                            "\"choosePowerup\"",
+                            "0",
+                            "\"linear\"",
+                            "1",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Exp",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Max_Exp",
+                            "=",
+                            "ExprequiredperLevel[PlayerStats.Level]"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PlayerStats.Level",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Max_Exp",
+                            "=",
+                            "ExprequiredperLevel[PlayerStats.Level]"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+                          },
+                          "parameters": [
+                            "expbar",
+                            "=",
+                            "Max_Exp",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanVariable"
+                          },
+                          "parameters": [
+                            "DonePicking",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "PowerUps",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Cache"
+                          },
+                          "parameters": [
+                            "chooseforpowerups"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Tween::TweenCameraZoom2"
+                          },
+                          "parameters": [
+                            "",
+                            "\"pausezoom in\"",
+                            "2.75",
+                            "",
+                            "\"linear\"",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "Type",
+                      "type": "string",
+                      "value": "0"
+                    },
+                    {
+                      "name": "Value",
+                      "type": "number",
+                      "value": 0
+                    },
+                    {
+                      "name": "DoneRandomizing",
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Skill Indicators",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillname",
+                    "Text",
+                    "=",
+                    "skillname.Value"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillletter",
+                    "Text",
+                    "=",
+                    "skillletter.Value"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 168,
+                "g": 235,
+                "r": 248,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Skill 1"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillletter",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillindicator",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillname",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Player",
+                    "\"dashcd\"",
+                    ">=",
+                    "PlayerStats.Agility"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillindicator",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skill_1_icon",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillname",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillletter",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillindicator",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Player",
+                    "\"dashcd\"",
+                    "<",
+                    "PlayerStats.Agility"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillname",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "skillletter",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillindicator",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skill_1_icon",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillname",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "skillletter",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Pause and Unpause Game",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Gamestate\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Gamestate\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 40,
+          "colorG": 238,
+          "colorR": 222,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Picking Rewards",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "PowerUps",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "DebuggerTools::ConsoleLog"
+                  },
+                  "parameters": [
+                    "PowerUps.Type",
+                    "\"info\"",
+                    ""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Health\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Health",
+                        "+",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Range\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Range",
+                        "+",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Damage\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Damage",
+                        "+",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Armor\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Armor",
+                        "+",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Agility\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Agility",
+                        "-",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Type",
+                        "=",
+                        "\"Regen\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Regeneration",
+                        "+",
+                        "PowerUps.Quantity"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "DonePicking",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "PowerUps",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Tween",
+                        "\"hovered\"",
+                        "4.5",
+                        "\"linear\"",
+                        "0.3",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                      },
+                      "parameters": [
+                        "PowerUps",
+                        "Tween",
+                        "\"hovered\"",
+                        "4",
+                        "\"linear\"",
+                        "0.3",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 74,
+          "colorG": 6,
+          "colorR": 80,
+          "creationTime": 0,
+          "folded": true,
+          "name": "Pause and Stats",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "pausebutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "click.wav",
+                    "",
+                    "100",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "pausebutton",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "NewPanelSprite2",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "panel",
+                    "Tween",
+                    "\"choosePowerup\"",
+                    "150",
+                    "\"linear\"",
+                    "1",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "NewPanelSprite2",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "NewPanelSprite2",
+                    "Tween",
+                    "\"showstats\"",
+                    "255",
+                    "\"elastic\"",
+                    "0.8",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "statslabel",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "backbutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "backicon",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "backgroundforstats",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenCameraZoom2"
+                  },
+                  "parameters": [
+                    "",
+                    "\"pausezoom in\"",
+                    "3.5",
+                    "",
+                    "\"linear\"",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "playeravatar",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Or"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteButton::PanelSpriteButton::IsHovered"
+                      },
+                      "parameters": [
+                        "pausebutton",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SourisSurObjet"
+                      },
+                      "parameters": [
+                        "icon2",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "AbouttoPause",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "icon2",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "AbouttoPause",
+                    "False",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
+                  },
+                  "parameters": [
+                    "backbutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "click.wav",
+                    "",
+                    "100",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenCameraZoom2"
+                  },
+                  "parameters": [
+                    "",
+                    "\"pausezoom in\"",
+                    "2.75",
+                    "",
+                    "\"linear\"",
+                    "0.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "backicon"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "NewPanelSprite2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "backbutton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "backgroundforstats"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "statsvalue"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "statslabel"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "pausebutton",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "panel",
+                    "Tween",
+                    "\"choosePowerup\"",
+                    "0",
+                    "\"linear\"",
+                    "0.8",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "playeravatar"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statslabel",
+                    "Text",
+                    "=",
+                    "statslabel.Value"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "ToString(roundTo(PlayerStats.Health,2)) + \" %\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "PlayerStats.Damage"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "2"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "PlayerStats.Speed"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "PlayerStats.Range"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "4"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "ToString(roundTo(PlayerStats.Armor,2))"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "\"Lvl \" + PlayerStats.Level"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "6"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "ToString(roundTo(PlayerStats.Regeneration, 2)) + \" %\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "7"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "ToString(roundTo(Exp ,1))+ \" Exp\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "8"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "ToString(roundTo(Max_Exp,1))+ \" Exp\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberObjectVariable"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "ID",
+                    "=",
+                    "9"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "statsvalue",
+                    "Text",
+                    "=",
+                    "PlayerStats.AttackSpeed"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         },
         {
           "colorB": 112,
@@ -34867,7 +37299,7 @@
           "isLocked": false,
           "name": "UI",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -34900,7 +37332,7 @@
           "isLocked": false,
           "name": "Predialouge",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -34986,6 +37418,10 @@
         {
           "name": "Pathfinding",
           "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "PathfindingObstacle",
+          "type": "PathfindingBehavior::PathfindingObstacleBehavior"
         },
         {
           "name": "Resizable",
