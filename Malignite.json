@@ -1,5 +1,5 @@
 {
-  "firstLayout": "",
+  "firstLayout": "MainMenu",
   "gdVersion": {
     "build": 228,
     "major": 5,
@@ -2435,6 +2435,14 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite108.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite108",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -10109,6 +10117,11 @@
           "value": false
         }
       ]
+    },
+    {
+      "name": "Total_Secs_Alive",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -10595,7 +10608,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.36732575450594623,
+        "zoomFactor": 0.3216911764706448,
         "windowMask": false
       },
       "objectsGroups": [
@@ -14657,7 +14670,7 @@
                 {
                   "name": "health",
                   "type": "number",
-                  "value": 3
+                  "value": 500
                 }
               ]
             },
@@ -19024,6 +19037,16 @@
                             "\"LoadingtoPoisonscene\"",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Total_Secs_Alive",
+                            "=",
+                            "TimerElapsedTime(\"playerlife_Seconds\")"
+                          ]
                         }
                       ]
                     }
@@ -19420,6 +19443,16 @@
                     "True",
                     "TimerElapsedTime(\"Gamestate\")"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Total_Secs_Alive",
+                    "+",
+                    "TimerElapsedTime(\"playerlife_Seconds\")"
+                  ]
                 }
               ]
             },
@@ -19493,7 +19526,7 @@
                     "Scoreholder",
                     "Text",
                     "=",
-                    "ToString(round(timerofgame)) + \" sec\""
+                    "Total_Secs_Alive + \" Secs\""
                   ]
                 }
               ]
@@ -21353,7 +21386,6 @@
           "colorG": 134,
           "colorR": 240,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemy Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22416,7 +22448,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "GolemAi",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -22756,6 +22787,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "EarthGolemite",
               "conditions": [],
@@ -23295,13 +23327,13 @@
               ]
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "AlgaeRoll",
               "conditions": [],
               "actions": [],
               "events": [
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
@@ -23595,6 +23627,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -23906,6 +23939,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "Terrablaster",
               "conditions": [],
@@ -24279,6 +24313,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Skill Indicators",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -30877,9 +30912,29 @@
                 "value": "SetNumberVariable"
               },
               "parameters": [
+                "PlayerStats.Health",
+                "=",
+                "50"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
                 "PlayerStats.Level",
                 "=",
                 "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "PlayerStats.Damage",
+                "+",
+                "30"
               ]
             },
             {
@@ -31065,7 +31120,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6244537826600346,
+        "zoomFactor": 1.8046714318875001,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -31096,6 +31151,54 @@
           "name": "IDforHolders",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "Enemy_Size",
+          "type": "structure",
+          "children": [
+            {
+              "name": "exoskeletons",
+              "type": "number",
+              "value": 0.6
+            },
+            {
+              "name": "radbats",
+              "type": "number",
+              "value": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Enemy_Health",
+          "type": "structure",
+          "children": [
+            {
+              "name": "exoskeletons",
+              "type": "number",
+              "value": 40
+            },
+            {
+              "name": "radbats",
+              "type": "number",
+              "value": 20
+            }
+          ]
+        },
+        {
+          "name": "Enemy_Damage",
+          "type": "structure",
+          "children": [
+            {
+              "name": "exoskeletons",
+              "type": "number",
+              "value": 12
+            },
+            {
+              "name": "radbats",
+              "type": "number",
+              "value": 20
+            }
+          ]
         }
       ],
       "instances": [
@@ -33237,7 +33340,43 @@
           "name": "radiant_skeleton",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Stats",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Damage",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Health",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Speed",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            },
+            {
+              "name": "ExpDrop",
+              "type": "array",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -33270,7 +33409,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite97",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33306,7 +33451,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite98",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33342,7 +33493,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite99",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33378,7 +33535,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite100",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33427,7 +33590,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "spidervenom",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33463,7 +33632,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "spidervenom2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33499,7 +33674,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "spidervenom3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33535,7 +33716,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "spidervenom4",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 8,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33580,9 +33767,97 @@
           "name": "bat",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Stats",
+              "type": "structure",
+              "children": [
+                {
+                  "name": "Damage",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Health",
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "name": "Speed",
+                  "type": "number",
+                  "value": 50
+                }
+              ]
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "value": "chasing"
+            },
+            {
+              "name": "Expdroprange",
+              "type": "array",
+              "children": [
+                {
+                  "type": "number",
+                  "value": 0
+                },
+                {
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "FireBullet",
+              "type": "FireBullet::FireBullet",
+              "FireCooldown": 0.1,
+              "HasJustFired": false,
+              "RotateBullet": true,
+              "FiringArc": 45,
+              "BulletQuantity": 1,
+              "AngleVariance": 0,
+              "BulletSpeedVariance": 0,
+              "AmmoQuantity": 0,
+              "ShotsPerReload": 0,
+              "ReloadDuration": 1,
+              "MaxAmmo": 0,
+              "ShotsBeforeNextReload": 0,
+              "TotalShotsFired": 0,
+              "TotalBulletsCreated": 0,
+              "StartingAmmo": 0,
+              "TotalReloadsCompleted": 0,
+              "UnlimitedAmmo": true,
+              "ReloadInProgress": false,
+              "HeatIncreasePerShot": 0,
+              "HeatLevel": 0,
+              "AutomaticReloading": true,
+              "OverheatDuration": 0,
+              "LinearCoolingRate": 0.1,
+              "ExponentialCoolingRate": 0.3,
+              "BulletLayer": "",
+              "RandomizedAngle": 0
+            },
+            {
+              "acceleration": 400,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "cellHeight": 20,
+              "cellWidth": 20,
+              "extraBorder": 0,
+              "gridOffsetX": 0,
+              "gridOffsetY": 0,
+              "maxSpeed": 200,
+              "name": "Pathfinding",
+              "rotateObject": false,
+              "smoothingMaxCellGap": 1,
+              "type": "PathfindingBehavior::PathfindingBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "walkright",
@@ -33596,7 +33871,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkright",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 12.5,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33632,7 +33913,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkright2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 12.5,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33668,7 +33955,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkright3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 12.5,
+                          "y": 8
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33717,7 +34010,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite104",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 3,
+                          "y": 8.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33753,7 +34052,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite105",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 3,
+                          "y": 8.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33789,7 +34094,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "NewSprite106",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Firepoint",
+                          "x": 3,
+                          "y": 8.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 0,
@@ -33902,6 +34213,73 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "bulletbat",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite108",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 8
+                          },
+                          {
+                            "x": 31,
+                            "y": 8
+                          },
+                          {
+                            "x": 31,
+                            "y": 20
+                          },
+                          {
+                            "x": 0,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -33912,6 +34290,9 @@
           },
           {
             "objectName": "wall"
+          },
+          {
+            "objectName": "bulletbat"
           },
           {
             "objectName": "Glowingpartofpoison"
@@ -34002,24 +34383,6 @@
               "parameters": [
                 "GameStarted",
                 "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "panelfordialouge",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "Predialog",
                 ""
               ]
             },
@@ -34557,6 +34920,15 @@
             },
             {
               "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "PowerUps",
+                "playerSpawmArea"
+              ]
+            },
+            {
+              "type": {
                 "value": "SetBooleanVariable"
               },
               "parameters": [
@@ -34583,6 +34955,15 @@
                 "Player",
                 "YSort",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"playerlife_Seconds\""
               ]
             },
             {
@@ -34641,7 +35022,7 @@
                 "labelforpups",
                 "Opacity",
                 "=",
-                "255"
+                "0"
               ]
             },
             {
@@ -34852,6 +35233,15 @@
             },
             {
               "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"playerlife_Seconds\""
+              ]
+            },
+            {
+              "type": {
                 "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
               },
               "parameters": [
@@ -34862,43 +35252,6 @@
                 "\"linear\"",
                 "1",
                 "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "PowerUps",
-                "Tween",
-                "\"showpowerups\"",
-                "0",
-                "\"linear\"",
-                "1",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-              },
-              "parameters": [
-                "labelforpups",
-                "Tween",
-                "\"showpowerups\"",
-                "0",
-                "\"linear\"",
-                "1",
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "ResetTimer"
-              },
-              "parameters": [
-                "",
-                "\"playerlife_Seconds\""
               ]
             }
           ]
@@ -35787,6 +36140,34 @@
           "parameters": []
         },
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "healthbar",
+                "=",
+                "PlayerStats.Health",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "expbar",
+                "=",
+                "Exp",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
@@ -36022,6 +36403,1887 @@
                     "Opacity",
                     "=",
                     "100"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 100,
+          "colorG": 16,
+          "colorR": 23,
+          "creationTime": 0,
+          "name": "Enemy Spawning",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\"",
+                    "<=",
+                    "60"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.exoskeletons",
+                    "=",
+                    "40"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.exoskeletons",
+                    "=",
+                    "12"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.exoskeletons",
+                    "=",
+                    "0.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnSpeed",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.radbats",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.radbats",
+                    "=",
+                    "12"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.radbats",
+                    "=",
+                    "28"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\"",
+                    ">",
+                    "60"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\"",
+                    "<=",
+                    "120"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.exoskeletons",
+                    "=",
+                    "60"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.exoskeletons",
+                    "=",
+                    "15"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.exoskeletons",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnSpeed",
+                    "=",
+                    "0.8"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.radbats",
+                    "=",
+                    "35"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.radbats",
+                    "=",
+                    "20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.radbats",
+                    "=",
+                    "1.3"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\"",
+                    ">",
+                    "120"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.exoskeletons",
+                    "=",
+                    "75"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.exoskeletons",
+                    "=",
+                    "20"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.exoskeletons",
+                    "=",
+                    "1.3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "SpawnSpeed",
+                    "=",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Size.radbats",
+                    "=",
+                    "1.5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Damage.radbats",
+                    "=",
+                    "30"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Enemy_Health.radbats",
+                    "=",
+                    "45"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Entities",
+                    "<=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "BossFight",
+                    "False",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GameOver",
+                    "False",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"enemyspawner\"",
+                    ">=",
+                    "SpawnSpeed"
+                  ]
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"playerlife_Seconds\"",
+                        "<",
+                        "30"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "SpawnerAreaEnemy"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "bat",
+                            "SpawnerAreaEnemy.X()",
+                            "SpawnerAreaEnemy.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Scale",
+                            "=",
+                            "Enemy_Size.radbats"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Stats.Health",
+                            "=",
+                            "Enemy_Health.radbats"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetUnlimitedAmmo"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Pathfinding",
+                            "=",
+                            "bat.Stats.Speed"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::Acceleration"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Pathfinding",
+                            "=",
+                            "bat.Stats.Speed * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetCooldownOp"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "=",
+                            "2.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetReloadDurationOp"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "=",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"enemyspawner\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "bat",
+                            "\"statetimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Expdroprange[0]",
+                            "=",
+                            "3.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Expdroprange[1]",
+                            "=",
+                            "4.5"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "disabled": true,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "SpawnerAreaEnemy"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "radiant_skeleton",
+                            "SpawnerAreaEnemy.X()",
+                            "SpawnerAreaEnemy.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Speed",
+                            "=",
+                            "60"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Damage",
+                            "=",
+                            "Enemy_Damage.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Scale",
+                            "=",
+                            "Enemy_Size.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Pathfinding",
+                            "=",
+                            "radiant_skeleton.Stats.Speed"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::Acceleration"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Pathfinding",
+                            "=",
+                            "radiant_skeleton.Stats.Speed * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Health",
+                            "=",
+                            "Enemy_Health.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"enemyspawner\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "ExpDrop[0]",
+                            "=",
+                            "1.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "ExpDrop[1]",
+                            "=",
+                            "4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"playerlife_Seconds\"",
+                        ">",
+                        "30"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "probability",
+                        "=",
+                        "RandomInRange(1,100)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "SpawnerAreaEnemy"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "probability",
+                            "<",
+                            "100"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "radiant_skeleton",
+                            "SpawnerAreaEnemy.X()",
+                            "SpawnerAreaEnemy.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Speed",
+                            "=",
+                            "60"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Damage",
+                            "=",
+                            "Enemy_Damage.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Scale",
+                            "=",
+                            "Enemy_Size.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Pathfinding",
+                            "=",
+                            "radiant_skeleton.Stats.Speed"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::Acceleration"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Pathfinding",
+                            "=",
+                            "radiant_skeleton.Stats.Speed * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Health",
+                            "=",
+                            "Enemy_Health.exoskeletons"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"enemyspawner\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "ExpDrop[0]",
+                            "=",
+                            "1.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "ExpDrop[1]",
+                            "=",
+                            "4"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "AjoutHasard"
+                          },
+                          "parameters": [
+                            "",
+                            "SpawnerAreaEnemy"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "probability",
+                            ">=",
+                            "50"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "probability",
+                            "<",
+                            "100"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "bat",
+                            "SpawnerAreaEnemy.X()",
+                            "SpawnerAreaEnemy.Y()",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ScalableCapability::ScalableBehavior::SetValue"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Scale",
+                            "=",
+                            "Enemy_Size.radbats"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Stats.Health",
+                            "=",
+                            "Enemy_Health.radbats"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetUnlimitedAmmo"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::MaxSpeed"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Pathfinding",
+                            "=",
+                            "bat.Stats.Speed"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PathfindingBehavior::Acceleration"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Pathfinding",
+                            "=",
+                            "bat.Stats.Speed * 2"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetCooldownOp"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "=",
+                            "2.3",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "FireBullet::FireBullet::SetReloadDurationOp"
+                          },
+                          "parameters": [
+                            "bat",
+                            "FireBullet",
+                            "=",
+                            "0",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetTimer"
+                          },
+                          "parameters": [
+                            "",
+                            "\"enemyspawner\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "bat",
+                            "\"statetimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "+",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Expdroprange[0]",
+                            "=",
+                            "3.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Expdroprange[1]",
+                            "=",
+                            "4.5"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "variables": [
+                {
+                  "name": "probability",
+                  "type": "number",
+                  "value": 0
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 28,
+          "colorG": 59,
+          "colorR": 126,
+          "creationTime": 0,
+          "name": "Enemy AI",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "radiant_skeleton",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "playerPOS",
+                        "=",
+                        "Player.X()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            "<",
+                            "radiant_skeleton.X()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Animation",
+                            "=",
+                            "\"skeletonleft\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            ">",
+                            "radiant_skeleton.X()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Animation",
+                            "=",
+                            "\"walkright\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "playerPOS",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "radiant_skeleton"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Sword_Aura",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionPoint"
+                          },
+                          "parameters": [
+                            "Sword_Aura",
+                            "radiant_skeleton.PointX(\"hitpoint\")",
+                            "radiant_skeleton.PointY(\"hitpoint\")"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Stats.Health",
+                        "-",
+                        "PlayerStats.Damage"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberObjectVariable"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            "Stats.Health",
+                            "<=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "radiant_skeleton",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Entities",
+                            "-",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "Exp",
+                            "+",
+                            "RandomInRange(radiant_skeleton.ExpDrop[0], radiant_skeleton.ExpDrop[1])"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "EnemyKilled",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "",
+                        "Player.X()",
+                        "Player.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Player",
+                        "400",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "=",
+                        "350"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "=",
+                        "225"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Player",
+                        "400",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::MaxSpeed"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "=",
+                        "100"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Acceleration"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Pathfinding",
+                        "=",
+                        "200"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "radiant_skeleton",
+                        "Player",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"hurted\"",
+                        ">=",
+                        "0.5"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "PlayerStats.Health",
+                        "-",
+                        "radiant_skeleton.Stats.Damage - ((radiant_skeleton.Stats.Damage * PlayerStats.Armor) / 100)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "AddForceAL"
+                      },
+                      "parameters": [
+                        "Player",
+                        "AngleBetweenPositions(radiant_skeleton.X(),radiant_skeleton.Y(),Player.X(),Player.Y())",
+                        "85",
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "0.3"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "Player"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Player",
+                        "\"hurted\""
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "Damage_recieve",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "bat",
+              "conditions": [],
+              "actions": [],
+              "events": [
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "playerPOS",
+                        "=",
+                        "Player.X()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            "<",
+                            "bat.X()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Animation",
+                            "=",
+                            "\"walkleft\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            ">",
+                            "bat.X()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Animation",
+                            "=",
+                            "\"walkright\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "playerPOS",
+                      "type": "number",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BooleanVariable"
+                              },
+                              "parameters": [
+                                "GamePause",
+                                "False",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Distance"
+                              },
+                              "parameters": [
+                                "bat",
+                                "Player",
+                                "100",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "bat"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "bat",
+                        "Pathfinding",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::And"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "bat",
+                            "Player",
+                            "100",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "bat",
+                        "Stats",
+                        "=",
+                        "\"firing\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringObjectVariable"
+                      },
+                      "parameters": [
+                        "bat",
+                        "state",
+                        "=",
+                        "\"firing\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardObject"
+                      },
+                      "parameters": [
+                        "bat",
+                        "FireBullet",
+                        "bat.PointX(\"Firepoint\")",
+                        "bat.PointY(\"Firepoint\")",
+                        "bulletbat",
+                        "Player",
+                        "100",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "bulletbat",
+                        "Damage",
+                        "=",
+                        "Enemy_Damage.radbats"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "bulletbat",
+                        "Scale",
+                        "=",
+                        "1.2"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "bat",
+                        "\"statetimer\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "bulletbat",
+                        "=",
+                        "Player.ZOrder()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "bat",
+                        "Player",
+                        "100",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "bat",
+                        "Pathfinding",
+                        "",
+                        "Player.X()",
+                        "Player.Y()"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "bat",
+                        "state",
+                        "=",
+                        "\"chasing\""
+                      ]
+                    }
                   ]
                 }
               ]
