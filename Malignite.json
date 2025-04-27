@@ -30559,7 +30559,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.49508400737489894,
+        "zoomFactor": 0.6040838749989006,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -30732,7 +30732,7 @@
           "persistentUuid": "c8f95978-44da-4708-95bf-2017ad483c09",
           "width": 480,
           "x": 416,
-          "y": 232,
+          "y": 168,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -30742,14 +30742,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 48,
-          "height": 96,
-          "keepRatio": true,
+          "height": 85,
           "layer": "UI",
           "name": "startbtn",
           "persistentUuid": "aa459331-d59d-47ed-96f9-3882599872d6",
           "width": 256,
           "x": 528,
-          "y": 352,
+          "y": 250,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -30759,14 +30758,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 48,
-          "height": 80,
-          "keepRatio": true,
+          "height": 85,
           "layer": "UI",
           "name": "exitbtn",
           "persistentUuid": "2756342d-ad3e-4a4f-8660-336719af21dc",
           "width": 256,
           "x": 528,
-          "y": 560,
+          "y": 600,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -30840,14 +30838,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 48,
-          "height": 80,
-          "keepRatio": true,
+          "height": 85,
           "layer": "UI",
           "name": "Settingsbutton",
           "persistentUuid": "d4a3fbcb-f53b-4983-af71-07bd136841e6",
           "width": 256,
           "x": 528,
-          "y": 464,
+          "y": 336,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -31028,6 +31025,450 @@
               "value": 1
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 54.857142857142854,
+          "height": 85,
+          "layer": "UI",
+          "name": "howtoplaybutton",
+          "persistentUuid": "6bdc4304-4d98-4a1c-ad2d-e0f63671be0e",
+          "width": 256,
+          "x": 529,
+          "y": 425,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 384,
+          "height": 85,
+          "layer": "UI",
+          "name": "credits_button",
+          "persistentUuid": "b0d3c31a-36fa-4517-9e43-c9b5e29a90d8",
+          "width": 256,
+          "x": 530,
+          "y": 514,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 611,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "bgforcredits",
+          "persistentUuid": "06632622-b34d-4fa5-9dc0-aa181e82e362",
+          "width": 1157,
+          "x": 68,
+          "y": 61,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 62,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditslabel",
+          "persistentUuid": "425e0d88-2a6f-4f5f-93f9-3f073bb5e660",
+          "width": 407,
+          "x": 462,
+          "y": 118,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "fontsize",
+              "type": "number",
+              "value": 40
+            },
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Credits"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 52,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditslabel",
+          "persistentUuid": "c7c89a3a-43d4-4f8c-909e-508516fc203e",
+          "width": 838,
+          "x": 247,
+          "y": 178,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "fontsize",
+              "type": "number",
+              "value": 32
+            },
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "The Matrix Crew"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 33,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "credslabelperperson",
+          "persistentUuid": "8b49edae-c899-4b72-beea-08becf90b74a",
+          "width": 489,
+          "x": 103,
+          "y": 272,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Game Director"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 33,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "credslabelperperson",
+          "persistentUuid": "00766a0b-1eea-4af1-bd84-fcfdb48e717f",
+          "width": 497,
+          "x": 95,
+          "y": 308,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Lead Programmer"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 29,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "credslabelperperson",
+          "persistentUuid": "d22e85f6-7e07-436d-8fdc-bf64ec08182b",
+          "width": 475,
+          "x": 117,
+          "y": 343,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Sound and Resources"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 29,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "credslabelperperson",
+          "persistentUuid": "0c065a6e-8346-4152-be3e-596d4598fbf3",
+          "width": 475,
+          "x": 112,
+          "y": 450,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Game Designer"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 29,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "credslabelperperson",
+          "persistentUuid": "b8a598fc-2f6b-45da-a20f-2556de260b09",
+          "width": 475,
+          "x": 109,
+          "y": 518,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Gameplay Ideas"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 29,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "3be3ed7a-df0e-451f-a97e-0f164abf348f",
+          "width": 546,
+          "x": 622,
+          "y": 273,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Cherry Sabadlab"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 28,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "2c51c4f1-48a0-405f-b9e3-16b49451545e",
+          "width": 546,
+          "x": 622,
+          "y": 310,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Jullie Bert Cogueron"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 30,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "fafa7f53-a0ef-43bb-a564-3d0506357b87",
+          "width": 510,
+          "x": 622,
+          "y": 344,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "John Kendrick Cabanera"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 30,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "abde01ce-9547-4547-acb8-ac52b3eee90c",
+          "width": 546,
+          "x": 622,
+          "y": 374,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Rommel Cuenco"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 30,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "3a4bd448-a935-4617-9f1a-bf8669a4b0a0",
+          "width": 546,
+          "x": 622,
+          "y": 406,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Angelika Viernes"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 28,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "82dcbf95-9019-4401-9d37-db6bb8ddb59c",
+          "width": 429,
+          "x": 621,
+          "y": 451,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Jullie Bert Cogueron"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 28,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "e4953a0f-6a57-4a9c-9528-cbe9648620aa",
+          "width": 450,
+          "x": 620,
+          "y": 481,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Edwin Germedia"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 28,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "2f47a0d2-179a-4e9d-98f6-5265313ff094",
+          "width": 499,
+          "x": 619,
+          "y": 519,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "Jullie Bert Cogueron"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 28,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsname",
+          "persistentUuid": "bec155ea-886a-4657-9b41-c99ca1e0328c",
+          "width": 499,
+          "x": 619,
+          "y": 548,
+          "zOrder": 22,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "The Matrix Crew"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 48,
+          "height": 50,
+          "keepRatio": true,
+          "layer": "credits",
+          "name": "creditsbackbutton",
+          "persistentUuid": "7e80065b-19a1-4efe-b64c-8fac91122150",
+          "width": 149,
+          "x": 1054,
+          "y": 84,
+          "zOrder": 23,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -32202,6 +32643,461 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "howtoplaybutton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {},
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns4.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btn.png2",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Tutorial",
+              "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 30,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Tutorial",
+                "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 30,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns2.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            }
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "credits_button",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {},
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns4.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btn.png2",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Credits",
+              "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 30,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Credits",
+                "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 30,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns2.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            }
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "bgforcredits",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "2020.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 500,
+                            "y": 0
+                          },
+                          {
+                            "x": 500,
+                            "y": 300
+                          },
+                          {
+                            "x": 0,
+                            "y": 300
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "creditslabel",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "0"
+            },
+            {
+              "name": "fontsize",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "string": "Malignite",
+          "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+          "textAlignment": "center",
+          "characterSize": 40,
+          "color": {
+            "b": 32,
+            "g": 32,
+            "r": 34
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Malignite",
+            "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "center",
+            "characterSize": 40,
+            "color": "34;32;32"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "credslabelperperson",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "0"
+            },
+            {
+              "name": "fontsize",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "string": "Malignite",
+          "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+          "textAlignment": "right",
+          "characterSize": 26,
+          "color": {
+            "b": 32,
+            "g": 32,
+            "r": 34
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Malignite",
+            "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+            "textAlignment": "right",
+            "verticalTextAlignment": "center",
+            "characterSize": 26,
+            "color": "34;32;32"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": true,
+          "italic": false,
+          "name": "creditsname",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [
+            {
+              "name": "textval",
+              "type": "string",
+              "value": "0"
+            },
+            {
+              "name": "fontsize",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [],
+          "behaviors": [],
+          "string": "Malignite",
+          "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+          "textAlignment": "left",
+          "characterSize": 28,
+          "color": {
+            "b": 32,
+            "g": 32,
+            "r": 34
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Malignite",
+            "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 28,
+            "color": "34;32;32"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "creditsbackbutton",
+          "type": "PanelSpriteButton::PanelSpriteButton",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {},
+          "childrenContent": {
+            "Hovered": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns4.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Idle": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btn.png2",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "Back",
+              "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+              "textAlignment": "center",
+              "characterSize": 24,
+              "color": {
+                "b": 255,
+                "g": 255,
+                "r": 255
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "Back",
+                "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 24,
+                "color": "255;255;255"
+              }
+            },
+            "Pressed": {
+              "bottomMargin": 0,
+              "height": 16,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "btns2.png",
+              "tiled": false,
+              "topMargin": 0,
+              "width": 32
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -32229,6 +33125,15 @@
             "objectName": "Settingsbutton"
           },
           {
+            "objectName": "howtoplaybutton"
+          },
+          {
+            "objectName": "credits_button"
+          },
+          {
+            "objectName": "creditsbackbutton"
+          },
+          {
             "objectName": "music"
           },
           {
@@ -32241,10 +33146,22 @@
             "objectName": "title02"
           },
           {
+            "objectName": "creditslabel"
+          },
+          {
+            "objectName": "credslabelperperson"
+          },
+          {
+            "objectName": "creditsname"
+          },
+          {
             "objectName": "shader"
           },
           {
             "objectName": "bg"
+          },
+          {
+            "objectName": "bgforcredits"
           }
         ]
       },
@@ -33085,6 +34002,22 @@
                 },
                 {
                   "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "howtoplaybutton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "credits_button"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::Activate"
                   },
                   "parameters": [
@@ -33109,6 +34042,26 @@
                   },
                   "parameters": [
                     "Settingsbutton",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "credits_button",
                     "",
                     ""
                   ]
@@ -33199,6 +34152,24 @@
                 },
                 {
                   "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "PanelSpriteButton::PanelSpriteButton::Activate"
                   },
                   "parameters": [
@@ -33229,6 +34200,26 @@
                 },
                 {
                   "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ModVolumeMusicCanal"
                   },
                   "parameters": [
@@ -33236,6 +34227,378 @@
                     "1",
                     "=",
                     "Game_Volumes.BackgroundMusic"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 50,
+          "colorG": 82,
+          "colorR": 5,
+          "creationTime": 0,
+          "name": "credits",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "DepartScene"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "credslabelperperson",
+                    "Text",
+                    "=",
+                    "credslabelperperson.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "creditsname",
+                    "Text",
+                    "=",
+                    "creditsname.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "creditslabel",
+                    "Text",
+                    "=",
+                    "creditslabel.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::Text::SetFontSize"
+                  },
+                  "parameters": [
+                    "creditslabel",
+                    "=",
+                    "creditslabel.fontsize"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "click.wav",
+                    "",
+                    "Game_Volumes.SFX",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "creditslabel",
+                    "Text",
+                    "=",
+                    "creditslabel.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "creditsname",
+                    "Text",
+                    "=",
+                    "creditsname.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "credslabelperperson",
+                    "Text",
+                    "=",
+                    "credslabelperperson.textval"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextObject::Text::SetFontSize"
+                  },
+                  "parameters": [
+                    "creditslabel",
+                    "=",
+                    "creditslabel.fontsize"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"credits\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Settingsbutton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "startbtn"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "exitbtn"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "howtoplaybutton"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "credits_button"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "exitbtn",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "startbtn",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "Settingsbutton",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::IsPressed"
+                  },
+                  "parameters": [
+                    "creditsbackbutton",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "click.wav",
+                    "",
+                    "Game_Volumes.SFX",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"credits\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "exitbtn",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "Settingsbutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "startbtn",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "Settingsbutton",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "exitbtn",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "credits_button",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "howtoplaybutton",
+                    "yes",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteButton::PanelSpriteButton::Activate"
+                  },
+                  "parameters": [
+                    "startbtn",
+                    "yes",
+                    ""
                   ]
                 }
               ]
@@ -33303,6 +34666,39 @@
           "name": "UI",
           "renderingType": "",
           "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "credits",
+          "renderingType": "",
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
