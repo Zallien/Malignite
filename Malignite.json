@@ -9456,7 +9456,7 @@
           "type": "Tween::TweenBehavior"
         }
       ],
-      "string": "Ans So The Earth Knight was Defeated and He may rest in Peace",
+      "string": "And So The Earth Knight [Quake Hart] Alongside with the Fire Knight [Ignis Flare]  was Defeated ",
       "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
       "textAlignment": "center",
       "characterSize": 24,
@@ -9479,7 +9479,7 @@
         "shadowOpacity": 127,
         "smoothed": true,
         "underlined": false,
-        "text": "Ans So The Earth Knight was Defeated and He may rest in Peace",
+        "text": "And So The Earth Knight [Quake Hart] Alongside with the Fire Knight [Ignis Flare]  was Defeated ",
         "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "center",
@@ -11824,7 +11824,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2550455473354833,
+        "zoomFactor": 0.6244537826601207,
         "windowMask": false
       },
       "objectsGroups": [
@@ -15981,7 +15981,7 @@
                 {
                   "name": "health",
                   "type": "number",
-                  "value": 500
+                  "value": 6
                 }
               ]
             },
@@ -17587,7 +17587,7 @@
                 {
                   "name": "Health",
                   "type": "number",
-                  "value": 1000
+                  "value": 5
                 },
                 {
                   "name": "Speed",
@@ -18495,6 +18495,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Damagefromplayer",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "0",
+          "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+          "textAlignment": "left",
+          "characterSize": 16,
+          "color": {
+            "b": 186,
+            "g": 186,
+            "r": 194
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "0",
+            "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 16,
+            "color": "194;186;186"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -18568,6 +18610,9 @@
           },
           {
             "objectName": "Fireball"
+          },
+          {
+            "objectName": "Damagefromplayer"
           }
         ]
       },
@@ -19577,6 +19622,15 @@
               },
               "parameters": [
                 "",
+                "\"timertillboss\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
                 "\"playerlife_Seconds\""
               ]
             },
@@ -19927,7 +19981,7 @@
                   },
                   "parameters": [
                     "timerofgame",
-                    "\"playerlife_Seconds\"",
+                    "\"timertillboss\"",
                     ">=",
                     "300"
                   ]
@@ -20267,6 +20321,15 @@
                     "=",
                     "\"IgnisFlare\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"timertillboss\""
+                  ]
                 }
               ]
             },
@@ -20279,7 +20342,7 @@
                   },
                   "parameters": [
                     "timerofgame",
-                    "\"playerlife_Seconds\"",
+                    "\"timertillboss\"",
                     ">=",
                     "180"
                   ]
@@ -20586,6 +20649,15 @@
                     "=",
                     "\"QuakeHart\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"timertillboss\""
+                  ]
                 }
               ],
               "events": [
@@ -20646,6 +20718,7 @@
               "actions": []
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "FireBoss",
               "conditions": [],
@@ -21483,7 +21556,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -21527,8 +21599,8 @@
                             "value": "NumberObjectVariable"
                           },
                           "parameters": [
-                            "EarthBoss",
-                            "Stats.health",
+                            "FireBoss",
+                            "stats.Health",
                             "<=",
                             "0"
                           ]
@@ -21540,7 +21612,7 @@
                             "value": "SetBooleanObjectVariable"
                           },
                           "parameters": [
-                            "EarthBoss",
+                            "FireBoss",
                             "isdead",
                             "True",
                             "\"chasing\""
@@ -23004,6 +23076,33 @@
                   "conditions": [
                     {
                       "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "FireBoss",
+                        "stats.Health",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Fireball",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
                         "value": "BuiltinCommonInstructions::Or"
                       },
                       "parameters": [],
@@ -23158,6 +23257,33 @@
                       "parameters": [
                         "Fireburst",
                         "\"PlayerHurtbyburst\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberObjectVariable"
+                      },
+                      "parameters": [
+                        "FireBoss",
+                        "stats.Health",
+                        "<=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "Fireburst",
+                        ""
                       ]
                     }
                   ]
@@ -23995,6 +24121,7 @@
           "colorG": 68,
           "colorR": 9,
           "creationTime": 0,
+          "folded": true,
           "name": "Character Exp Progression",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24585,7 +24712,7 @@
                                 "labelforpups",
                                 "Text",
                                 "=",
-                                "\"Reduce \" + ToString(roundTo(Value,2))+ \" of \" + Type"
+                                "\"Add\" + ToString(roundTo(Value,2))+ \" of \" +  Type"
                               ]
                             },
                             {
@@ -24918,7 +25045,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Pause and Unpause Game",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -24956,6 +25082,34 @@
                     "\"playerlife_Seconds\""
                   ]
                 }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "TimerPaused"
+                      },
+                      "parameters": [
+                        "",
+                        "\"timertillboss\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"timertillboss\""
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -24989,6 +25143,43 @@
                   "parameters": [
                     "",
                     "\"playerlife_Seconds\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "TimerPaused"
+                      },
+                      "parameters": [
+                        "",
+                        "\"timertillboss\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "BossFight",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "UnPauseTimer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"timertillboss\""
+                      ]
+                    }
                   ]
                 }
               ]
@@ -25290,6 +25481,7 @@
           "colorG": 134,
           "colorR": 240,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemy Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -30956,7 +31148,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9934433498259823,
+        "zoomFactor": 0.3925161175488325,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -35254,7 +35446,7 @@
           "isLocked": false,
           "name": "credits",
           "renderingType": "",
-          "visibility": true,
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
@@ -36994,45 +37186,54 @@
                 "",
                 ""
               ]
-            },
+            }
+          ],
+          "events": [
             {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "PlayerStats.Health",
-                "=",
-                "50"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "PlayerStats.Level",
-                "=",
-                "3"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "PlayerStats.Damage",
-                "+",
-                "30"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "Exp",
-                "=",
-                "10"
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PlayerStats.Health",
+                    "=",
+                    "50"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PlayerStats.Level",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "PlayerStats.Damage",
+                    "+",
+                    "30"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Exp",
+                    "=",
+                    "10"
+                  ]
+                }
               ]
             }
           ]
@@ -37212,7 +37413,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.9610368693715359,
+        "zoomFactor": 0.5117784035210525,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -37231,7 +37432,7 @@
             },
             {
               "type": "string",
-              "value": "The echoes of the corrupted knight still linger, but the war is far from over."
+              "value": "Time to fight back!!!"
             },
             {
               "type": "string",
@@ -38190,13 +38391,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 848,
+          "height": 864,
           "keepRatio": true,
           "layer": "UI",
           "name": "panel",
           "persistentUuid": "20d44aa5-9065-41b8-bc52-743a827b1323",
-          "width": 1392,
-          "x": -54,
+          "width": 1476,
+          "x": -87,
           "y": -74,
           "zOrder": 1,
           "numberProperties": [],
@@ -41884,15 +42085,6 @@
                 "1",
                 ""
               ]
-            },
-            {
-              "type": {
-                "value": "Montre"
-              },
-              "parameters": [
-                "skipbutton",
-                ""
-              ]
             }
           ]
         },
@@ -41975,7 +42167,7 @@
                 "\"hidedialouge1\"",
                 "0",
                 "\"linear\"",
-                "8",
+                "4",
                 ""
               ]
             }
@@ -42060,7 +42252,7 @@
                 "\"hidedialouge2\"",
                 "0",
                 "\"linear\"",
-                "8",
+                "4",
                 ""
               ]
             }
@@ -46675,11 +46867,39 @@
           "colorG": 59,
           "colorR": 126,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemy AI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "radiant_skeleton",
+                    "radiant_skeleton",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "radiant_skeleton",
+                    "radiant_skeleton",
+                    "yes"
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "bulletbat",
@@ -49341,7 +49561,7 @@
           "isLocked": false,
           "name": "Predialouge",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -49486,7 +49706,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.5468750000000074,
+        "zoomFactor": 0.7130377630690491,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -49497,15 +49717,15 @@
           "children": [
             {
               "type": "string",
-              "value": "The ruins seep poison, curling through the air like a ghostly shroud. Each step forward is a battle against the decay of a lost world."
+              "value": "The knight stood amidst the ruins, his armor scorched, his breath ragged—his fury an inferno that consumed all hesitation"
             },
             {
               "type": "string",
-              "value": "The echoes of the corrupted knight still linger, but the war is far from over."
+              "value": "With a roar that shook the heavens, he lunged, his blade seeking vengeance in the heart of the monster that had razed his world"
             },
             {
               "type": "string",
-              "value": "The echoes of the corrupted knight still linger, but the war is far from over."
+              "value": "The enemy sneered, but in the knight’s unrelenting wrath, there was no mercy—only the final judgment carved in steel."
             }
           ]
         }
@@ -51702,7 +51922,7 @@
               "parameters": [
                 "Predialog",
                 "Tween",
-                "\"hidedialouge0\""
+                "\"hidedialouge2\""
               ]
             },
             {
@@ -52136,6 +52356,7 @@
           "colorG": 6,
           "colorR": 80,
           "creationTime": 0,
+          "folded": true,
           "name": "Pause and Stats",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
