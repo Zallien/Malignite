@@ -3010,6 +3010,158 @@
         "name": "NewSprite148",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite149.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite149",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite150.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite150",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite151.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite151",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite152.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite152",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite153.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite153",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/idleright2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "idleright",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/idleleft2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "idleleft",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/idleright3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "idleright2",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite154.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite154",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite155.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite155",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite156.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite156",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite157.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite157",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite158.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite158",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite159.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite159",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite160.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite160",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite161.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite161",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite162.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite162",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite163.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite163",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite164.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite164",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -10810,6 +10962,71 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": false,
+      "italic": false,
+      "name": "timealive",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [
+        {
+          "name": "textvalue",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "ID",
+          "type": "number",
+          "value": 0
+        }
+      ],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Sticker",
+          "type": "Sticker::Sticker",
+          "OnlyFollowPosition": false,
+          "IsDestroyedWithParent": false
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time",
+          "Property": "12 - Hour"
+        }
+      ],
+      "string": "00:00",
+      "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+      "textAlignment": "center",
+      "characterSize": 20,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      },
+      "content": {
+        "bold": false,
+        "isOutlineEnabled": false,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "255;255;255",
+        "outlineThickness": 2,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "00:00",
+        "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
+        "textAlignment": "center",
+        "verticalTextAlignment": "top",
+        "characterSize": 20,
+        "color": "255;255;255"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -11006,6 +11223,9 @@
       },
       {
         "objectName": "volvalue"
+      },
+      {
+        "objectName": "timealive"
       }
     ]
   },
@@ -11960,7 +12180,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6244537826601207,
+        "zoomFactor": 1.5804687500003067,
         "windowMask": false
       },
       "objectsGroups": [
@@ -23434,7 +23654,6 @@
           "colorG": 10,
           "colorR": 111,
           "creationTime": 0,
-          "folded": true,
           "name": "Game Over",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -29982,6 +30201,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time"
         },
         {
           "name": "TopDownMovement",
@@ -49841,7 +50064,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.46331118245140435,
+        "zoomFactor": 0.47893418845353236,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -50089,15 +50312,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 26,
           "keepRatio": true,
           "layer": "UI",
           "name": "bossname_for_health",
           "persistentUuid": "570a8da6-9b3f-404a-954f-834c7938e6a9",
-          "width": 0,
-          "x": 596,
-          "y": 52,
+          "width": 138,
+          "x": 608,
+          "y": 51,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -51166,17 +51390,17 @@
                 {
                   "name": "Damage",
                   "type": "number",
-                  "value": 0
+                  "value": 20
                 },
                 {
                   "name": "health",
                   "type": "number",
-                  "value": 0
+                  "value": 5000
                 },
                 {
                   "name": "speed",
                   "type": "number",
-                  "value": 0
+                  "value": 40
                 }
               ]
             },
@@ -51209,6 +51433,11 @@
               "name": "attackstate",
               "type": "string",
               "value": "normalattack"
+            },
+            {
+              "name": "Invincible",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -51258,6 +51487,10 @@
               "maxSpeed": 100,
               "rotateObject": false,
               "smoothingMaxCellGap": 1
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
@@ -51273,7 +51506,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51309,7 +51548,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51345,7 +51590,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51381,7 +51632,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss4",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51430,7 +51687,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51466,7 +51729,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51502,7 +51771,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51538,7 +51813,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft4",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51586,8 +51867,14 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite137",
-                      "points": [],
+                      "image": "idleright",
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51625,7 +51912,7 @@
               ]
             },
             {
-              "name": "NewSprite",
+              "name": "idleleft",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -51635,8 +51922,14 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite138",
-                      "points": [],
+                      "image": "idleleft",
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41,
+                          "y": 33
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51731,6 +52024,11 @@
               "name": "attackstate",
               "type": "string",
               "value": "normalattack"
+            },
+            {
+              "name": "Invincible",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -51780,6 +52078,10 @@
               "maxSpeed": 100,
               "rotateObject": false,
               "smoothingMaxCellGap": 1
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
@@ -51795,7 +52097,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51831,7 +52139,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51867,7 +52181,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51903,7 +52223,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "Finalboss4",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51952,7 +52278,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -51988,7 +52320,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft2",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -52024,7 +52362,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft3",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -52060,7 +52404,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "walkleft4",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -52108,8 +52458,14 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite137",
-                      "points": [],
+                      "image": "idleright2",
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -52157,8 +52513,14 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite138",
-                      "points": [],
+                      "image": "NewSprite154",
+                      "points": [
+                        {
+                          "name": "hitpoint",
+                          "x": 41.5,
+                          "y": 33.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -52214,11 +52576,11 @@
                 {
                   "looping": false,
                   "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.18,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite148",
+                      "image": "NewSprite160",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -52234,20 +52596,369 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 17
+                            "x": 17,
+                            "y": 10
                           },
                           {
-                            "x": 59,
-                            "y": 17
+                            "x": 24,
+                            "y": 10
                           },
                           {
-                            "x": 59,
-                            "y": 42
+                            "x": 24,
+                            "y": 20
                           },
                           {
-                            "x": 2,
-                            "y": 42
+                            "x": 17,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite161",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35.5,
+                        "y": 30.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 36,
+                        "y": 29
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 20
+                          },
+                          {
+                            "x": 17,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite162",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35.5,
+                        "y": 30.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 36,
+                        "y": 29
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 20
+                          },
+                          {
+                            "x": 17,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite163",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35.5,
+                        "y": 30.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 36,
+                        "y": 29
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 20
+                          },
+                          {
+                            "x": 17,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite164",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 35.5,
+                        "y": 30.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 36,
+                        "y": 29
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 17,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 10
+                          },
+                          {
+                            "x": 24,
+                            "y": 20
+                          },
+                          {
+                            "x": 17,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "smokeVFX",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.16,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite149",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 39.5,
+                        "y": 47.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 18,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 52
+                          },
+                          {
+                            "x": 18,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite150",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 39.5,
+                        "y": 47.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 18,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 52
+                          },
+                          {
+                            "x": 18,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite151",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 39.5,
+                        "y": 47.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 18,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 52
+                          },
+                          {
+                            "x": 18,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite152",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 39.5,
+                        "y": 47.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 18,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 52
+                          },
+                          {
+                            "x": 18,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite153",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 39.5,
+                        "y": 47.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 18,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 25
+                          },
+                          {
+                            "x": 64,
+                            "y": 52
+                          },
+                          {
+                            "x": 18,
+                            "y": 52
                           }
                         ]
                       ]
@@ -52273,6 +52984,9 @@
           },
           {
             "objectName": "shadowbullets"
+          },
+          {
+            "objectName": "smokeVFX"
           }
         ]
       },
@@ -53164,6 +53878,64 @@
               ]
             }
           ]
+        },
+        {
+          "colorB": 109,
+          "colorG": 52,
+          "colorR": 18,
+          "creationTime": 0,
+          "name": "Environment",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player",
+                    "tilesprites",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player",
+                    "tilesprites",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "boss_health",
+                    "=",
+                    "Finalboss.stats.health",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
         },
         {
           "colorB": 74,
@@ -54160,6 +54932,163 @@
               "actions": [
                 {
                   "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "bossname_for_health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "tagline",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    "Text",
+                    "=",
+                    "\"Morvath\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bossname_for_health",
+                    "Text",
+                    "=",
+                    "\"Morvath\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "tagline",
+                    "Text",
+                    "=",
+                    "\"The Final Boss\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    "Scale",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "tagline",
+                    "Scale",
+                    "=",
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    "Tween",
+                    "\"to small\"",
+                    "1",
+                    "\"elastic\"",
+                    "3",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "tagline",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectScaleTween3"
+                  },
+                  "parameters": [
+                    "tagline",
+                    "Tween",
+                    "\"to small\"",
+                    "1",
+                    "\"elastic\"",
+                    "2",
+                    "",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenCameraZoom2"
+                  },
+                  "parameters": [
+                    "",
+                    "\"zoomout\"",
+                    "1.75",
+                    "",
+                    "\"linear\"",
+                    "2"
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Create"
                   },
                   "parameters": [
@@ -54203,6 +55132,15 @@
                 },
                 {
                   "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Finalboss",
+                    "\"reposcd\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "FireBullet::FireBullet::SetCooldownOp"
                   },
                   "parameters": [
@@ -54212,13 +55150,345 @@
                     "2.5",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PathfindingBehavior::Acceleration"
+                  },
+                  "parameters": [
+                    "Finalboss",
+                    "Pathfinding",
+                    "=",
+                    "Finalboss.stats.speed"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PathfindingBehavior::MaxSpeed"
+                  },
+                  "parameters": [
+                    "Finalboss",
+                    "Pathfinding",
+                    "=",
+                    "Finalboss.stats.speed * 2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "Finalboss",
+                    "state",
+                    "=",
+                    "\"chasing\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Montre"
+                  },
+                  "parameters": [
+                    "boss_health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boss_health",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "bossname_for_health",
+                    "Opacity",
+                    "=",
+                    "180"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "boss_name",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "tagline",
+                    "Opacity",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+                  },
+                  "parameters": [
+                    "boss_health",
+                    "=",
+                    "Finalboss.stats.health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "boss_health",
+                    "=",
+                    "Finalboss.stats.health",
+                    ""
+                  ]
                 }
               ]
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Arreter"
+                  },
+                  "parameters": [
+                    "Finalboss"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PathfindingBehavior::Speed"
+                  },
+                  "parameters": [
+                    "Finalboss",
+                    "Pathfinding",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "folded": true,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "shadowbullets",
               "conditions": [],
-              "actions": []
+              "actions": [],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "TimerPaused"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Gamestate\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "False",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "shadowbullets",
+                            "Player",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CompareObjectTimer"
+                          },
+                          "parameters": [
+                            "Player",
+                            "\"hurted\"",
+                            ">=",
+                            "0.5"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player",
+                            "\"hurted\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetNumberVariable"
+                          },
+                          "parameters": [
+                            "PlayerStats.Health",
+                            "-",
+                            "Finalboss. stats.Damage - ((Finalboss. stats.Damage* PlayerStats.Armor) / 100)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "shadowbullets",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player",
+                            "AngleBetweenPositions(shadowbullets.X(),shadowbullets.Y(),Player.X(),Player.Y() )",
+                            "120",
+                            "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "RandomFloatInRange(0.3,0.7)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Arreter"
+                          },
+                          "parameters": [
+                            "Player"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "shadowbullets",
+                            "Player",
+                            "1000",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "shadowbullets",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": []
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::ForEach",
@@ -54242,15 +55512,119 @@
                   "conditions": [
                     {
                       "type": {
-                        "value": "StringObjectVariable"
+                        "inverted": true,
+                        "value": "Distance"
                       },
                       "parameters": [
                         "Finalboss",
-                        "attackstate",
-                        "=",
-                        "\"normalattack\""
+                        "Player",
+                        "150",
+                        ""
                       ]
                     },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Invincible",
+                        "=",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "state",
+                        "=",
+                        "\"chasing\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Pathfinding",
+                        "",
+                        "Player.X()",
+                        "Player.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Player",
+                        "150",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Invincible",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "\"switchpos\"",
+                        ">=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "\"switchpos\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "=",
+                        "RandomInRange(Player.X() - 50, Player.X() + 50)",
+                        "=",
+                        "RandomInRange(Player.Y() - 50, Player.Y() + 50)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
                     {
                       "type": {
                         "value": "Distance"
@@ -54266,142 +55640,81 @@
                   "actions": [
                     {
                       "type": {
-                        "value": "FireBullet::FireBullet::FireTowardObject"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
                         "Finalboss",
-                        "FireBullet",
-                        "Finalboss.X()",
-                        "Finalboss.Y()",
-                        "shadowbullets",
-                        "Player",
-                        "150",
+                        "state",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "Finalboss"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Pathfinding",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "\"invincibletimer\"",
+                        ">=",
+                        "30"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Invincible",
+                        "False",
                         ""
                       ]
                     },
                     {
                       "type": {
-                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
                       },
                       "parameters": [
-                        "shadowbullets",
-                        "Scale",
-                        "=",
-                        "0.6"
+                        "Finalboss",
+                        "Tween",
+                        "\"ghosting01\"",
+                        "255",
+                        "\"linear\"",
+                        "0.8",
+                        ""
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": []
                 },
                 {
                   "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberVariable"
-                      },
-                      "parameters": [
-                        "playerPOS",
-                        "=",
-                        "Player.X()"
-                      ]
-                    }
-                  ],
-                  "events": [
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "playerPOS",
-                            "<",
-                            "Finalboss.X()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "Finalboss",
-                            "state",
-                            "!=",
-                            "\"idle\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Finalboss",
-                            "Animation",
-                            "=",
-                            "\"walkleft\""
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "NumberVariable"
-                          },
-                          "parameters": [
-                            "playerPOS",
-                            ">",
-                            "Finalboss.X()"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "StringObjectVariable"
-                          },
-                          "parameters": [
-                            "Finalboss",
-                            "state",
-                            "!=",
-                            "\"idle\""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                          },
-                          "parameters": [
-                            "Finalboss",
-                            "Animation",
-                            "=",
-                            "\"walkright\""
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "variables": [
-                    {
-                      "name": "playerPOS",
-                      "type": "number",
-                      "value": 0
-                    }
-                  ]
-                },
-                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -54436,6 +55749,7 @@
                   ],
                   "events": [
                     {
+                      "folded": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -54473,42 +55787,10 @@
                           },
                           "parameters": [
                             "",
-                            "clonefinalboss",
+                            "smokeVFX",
                             "RandomInRange(Finalboss.X()-50,Finalboss.X() + 50)",
                             "RandomInRange(Finalboss.Y()-50,Finalboss.Y() + 50)",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "FireBullet::FireBullet::SetCooldownOp"
-                          },
-                          "parameters": [
-                            "clonefinalboss",
-                            "FireBullet",
-                            "=",
-                            "2.5",
-                            ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ScalableCapability::ScalableBehavior::SetValue"
-                          },
-                          "parameters": [
-                            "clonefinalboss",
-                            "Scale",
-                            "=",
-                            "1.2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ResetObjectTimer"
-                          },
-                          "parameters": [
-                            "clonefinalboss",
-                            "\"timerofclone\""
                           ]
                         },
                         {
@@ -54518,6 +55800,82 @@
                           "parameters": [
                             "Finalboss",
                             "\"SkillActivationtimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Wait"
+                          },
+                          "parameters": [
+                            "0.3"
+                          ]
+                        }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::Once"
+                              },
+                              "parameters": []
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "Create"
+                              },
+                              "parameters": [
+                                "",
+                                "clonefinalboss",
+                                "smokeVFX.X()",
+                                "smokeVFX.Y()",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "FireBullet::FireBullet::SetCooldownOp"
+                              },
+                              "parameters": [
+                                "clonefinalboss",
+                                "FireBullet",
+                                "=",
+                                "2.5",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ScalableCapability::ScalableBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "clonefinalboss",
+                                "Scale",
+                                "=",
+                                "1.2"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "ResetObjectTimer"
+                              },
+                              "parameters": [
+                                "clonefinalboss",
+                                "\"timerofclone\""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "Delete"
+                              },
+                              "parameters": [
+                                "smokeVFX",
+                                ""
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -54533,6 +55891,148 @@
                             "Skilldess",
                             "=",
                             "1"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Invincible",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Tween",
+                            "\"ghosting01\"",
+                            "70",
+                            "\"linear\"",
+                            "1.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Invincible",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "\"SkillActivationtimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "\"switchpos\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "\"invincibletimer\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Or"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "Finalboss",
+                                    "Invincible",
+                                    "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Skilldess",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Skilldess",
+                                    "=",
+                                    "0"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "SceneInstancesCount"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "clonefinalboss",
+                                    "!=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         },
                         {
@@ -54564,17 +56064,102 @@
                   ]
                 },
                 {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "state machine\n"
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
                       "type": {
-                        "value": "CompareObjectTimer"
+                        "value": "StringObjectVariable"
                       },
                       "parameters": [
                         "Finalboss",
-                        "\"timerofclone\"",
-                        ">=",
-                        "1"
+                        "attackstate",
+                        "=",
+                        "\"normalattack\""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "FireBullet::FireBullet::FireTowardObject"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "FireBullet",
+                        "Finalboss.X()",
+                        "Finalboss.Y()",
+                        "shadowbullets",
+                        "Player",
+                        "100",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ScalableCapability::ScalableBehavior::SetValue"
+                      },
+                      "parameters": [
+                        "shadowbullets",
+                        "Scale",
+                        "=",
+                        "0.4"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Or"
+                      },
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "value": "CollisionNP"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Sword_Aura",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "CollisionPoint"
+                          },
+                          "parameters": [
+                            "Sword_Aura",
+                            "Finalboss.PointX(\"hitpoint\")",
+                            "Finalboss.PointY(\"hitpoint\")"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "GamePause",
+                        "False",
+                        ""
                       ]
                     },
                     {
@@ -54584,33 +56169,144 @@
                       "parameters": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberObjectVariable"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "stats.health",
+                        "-",
+                        "PlayerStats.Damage"
+                      ]
+                    }
+                  ],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "BooleanObjectVariable"
+                            "value": "NumberObjectVariable"
                           },
                           "parameters": [
                             "Finalboss",
-                            "Clone",
-                            "True",
+                            "stats.health",
+                            "<=",
+                            "0"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "GamePause",
+                            "False",
                             ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "folded": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "playerPOS",
+                        "=",
+                        "Player.X()"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            "<",
+                            "Finalboss.X()"
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "Arreter"
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
-                            "Finalboss"
+                            "Finalboss",
+                            "Animation",
+                            "=",
+                            "\"walkleft\""
                           ]
                         }
                       ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "NumberVariable"
+                          },
+                          "parameters": [
+                            "playerPOS",
+                            ">",
+                            "Finalboss.X()"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Animation",
+                            "=",
+                            "\"walkright\""
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "playerPOS",
+                      "type": "number",
+                      "value": 0
                     }
                   ]
                 }
@@ -54629,7 +56325,6 @@
               "comment": "for clones"
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEach",
               "object": "clonefinalboss",
               "conditions": [
@@ -54646,6 +56341,201 @@
               ],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Player",
+                        "150",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "state",
+                        "=",
+                        "\"chasing\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::SetDestination"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Pathfinding",
+                        "",
+                        "Player.X()",
+                        "Player.Y()"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Player",
+                        "150",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Invincible",
+                        "True",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "\"switchpos\"",
+                        ">=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "\"switchpos\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "MettreXY"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "=",
+                        "RandomInRange(Player.X() - 50, Player.X() + 50)",
+                        "=",
+                        "RandomInRange(Player.Y() - 50, Player.Y() + 50)"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Player",
+                        "150",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "state",
+                        "=",
+                        "\"idle\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "clonefinalboss"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "PathfindingBehavior::Speed"
+                      },
+                      "parameters": [
+                        "Finalboss",
+                        "Pathfinding",
+                        "=",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CompareObjectTimer"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "\"invincibletimer\"",
+                        ">=",
+                        "20"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Invincible",
+                        "False",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                      },
+                      "parameters": [
+                        "clonefinalboss",
+                        "Tween",
+                        "\"ghosting01\"",
+                        "255",
+                        "\"linear\"",
+                        "0.8",
+                        ""
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -54685,7 +56575,7 @@
                         "clonefinalboss.Y()",
                         "shadowbullets",
                         "Player",
-                        "150",
+                        "100",
                         ""
                       ]
                     },
@@ -54697,35 +56587,7 @@
                         "shadowbullets",
                         "Scale",
                         "=",
-                        "0.6"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Finalboss",
-                        "posfinalboss[0]",
-                        "=",
-                        "Finalboss.X()"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetNumberObjectVariable"
-                      },
-                      "parameters": [
-                        "Finalboss",
-                        "posfinalboss[1]",
-                        "=",
-                        "Finalboss.Y()"
+                        "0.4"
                       ]
                     }
                   ]
@@ -54868,6 +56730,7 @@
                   ],
                   "events": [
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
@@ -54882,13 +56745,13 @@
                         },
                         {
                           "type": {
-                            "value": "SceneInstancesCount"
+                            "value": "BooleanObjectVariable"
                           },
                           "parameters": [
-                            "",
                             "clonefinalboss",
-                            "=",
-                            "1"
+                            "Invincible",
+                            "False",
+                            ""
                           ]
                         },
                         {
@@ -54898,19 +56761,100 @@
                           "parameters": []
                         }
                       ],
-                      "actions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                          },
+                          "parameters": [
+                            "clonefinalboss",
+                            "Tween",
+                            "\"ghosting01\"",
+                            "85",
+                            "\"linear\"",
+                            "1.5",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Finalboss",
+                            "Invincible",
+                            "True",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "clonefinalboss",
+                            "\"SkillActivationtimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "clonefinalboss",
+                            "\"switchpos\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "clonefinalboss",
+                            "\"invincibletimer\""
+                          ]
+                        }
+                      ]
                     },
                     {
+                      "disabled": true,
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
                         {
                           "type": {
-                            "value": "NumberVariable"
+                            "value": "BuiltinCommonInstructions::Or"
                           },
-                          "parameters": [
-                            "Skilldess",
-                            "=",
-                            "1"
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "value": "BuiltinCommonInstructions::And"
+                              },
+                              "parameters": [],
+                              "subInstructions": [
+                                {
+                                  "type": {
+                                    "value": "BooleanObjectVariable"
+                                  },
+                                  "parameters": [
+                                    "clonefinalboss",
+                                    "Invincible",
+                                    "True",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Skilldess",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ]
+                            }
                           ]
                         },
                         {
@@ -54926,7 +56870,7 @@
                             "value": "ResetObjectTimer"
                           },
                           "parameters": [
-                            "Finalboss",
+                            "clonefinalboss",
                             "\"SkillActivationtimer\""
                           ]
                         }
@@ -54952,7 +56896,7 @@
                         "clonefinalboss",
                         "\"timerofclone\"",
                         ">=",
-                        "6"
+                        "20"
                       ]
                     },
                     {
@@ -55212,7 +57156,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6897782140104568,
+        "zoomFactor": 0.44819780454104013,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -55324,7 +57268,7 @@
             "rowCount": 4,
             "columnCount": 8,
             "tileSize": 16,
-            "tilesWithHitBox": "4,2,0,9,11"
+            "tilesWithHitBox": "4,2,0,9,11,13,10,6"
           }
         },
         {
@@ -98126,6 +100070,1277 @@
                   "description": "Behavior",
                   "name": "Behavior",
                   "supplementaryInformation": "Recolorizer::PanelSpriteRecolorizer",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "@Bouh",
+      "category": "User interface",
+      "extensionNamespace": "",
+      "fullName": "Time formatting",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWNsb2NrLWRpZ2l0YWwiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMiw2QTIsMiAwIDAsMCAwLDhWMTZBMiwyIDAgMCwwIDIsMThIMjJBMiwyIDAgMCwwIDI0LDE2VjhBMiwyIDAgMCwwIDIyLDZNMiw4SDIyVjE2SDJNMyw5VjEwLjVINi4yNUwzLDE1SDQuNzVMOCwxMC41VjlNOS4yNSw5VjEwLjVIMTAuNzVWOU0xMiw5VjEwLjVIMTMuNVYxNUgxNVY5TTE3LDlBMSwxIDAgMCwwIDE2LDEwVjE0QTEsMSAwIDAsMCAxNywxNUgyMEExLDEgMCAwLDAgMjEsMTRWMTBBMSwxIDAgMCwwIDIwLDlNMTcuNSwxMC41SDE5LjVWMTMuNUgxNy41TTkuMjUsMTMuNVYxNUgxMC43NVYxMy41IiAvPjwvc3ZnPg==",
+      "name": "TimeFormatter",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/clock-digital.svg",
+      "shortDescription": "Converts seconds into standard time formats, such as HH:MM:SS. ",
+      "version": "0.0.2",
+      "description": [
+        "Ideal for displaying timers on screen.",
+        "",
+        "Formats included:",
+        "* HH:MM:SS",
+        "* HH:MM:SS.000 (displays milliseconds)"
+      ],
+      "origin": {
+        "identifier": "TimeFormatter",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "time",
+        "timer",
+        "format",
+        "hours",
+        "minutes",
+        "seconds",
+        "milliseconds"
+      ],
+      "authorIds": [
+        "2OwwM8ToR9dx9RJ2sAKTcrLmCB92"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "Format time in seconds to HH:MM:SS.",
+          "fullName": "Format time in seconds to HH:MM:SS",
+          "functionType": "StringExpression",
+          "name": "SecondsToHHMMSS",
+          "sentence": "Format time _PARAM1_ to HH:MM:SS in _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "var format_time = function (time_second) {\r",
+                "    date = new Date(null);\r",
+                "    date.setSeconds(time_second);\r",
+                "    if (time_second >= 3600) {\r",
+                "        return date.toISOString().substr(11, 8); // MM:SS\r",
+                "    } else {\r",
+                "        return date.toISOString().substr(14, 5); // HH:MM:SS\r",
+                "    }\r",
+                "}\r",
+                "\r",
+                "eventsFunctionContext.returnValue = format_time(eventsFunctionContext.getArgument(\"TimeInSeconds\"));"
+              ],
+              "parameterObjects": "",
+              "useStrict": false,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [
+            {
+              "description": "Time, in seconds",
+              "name": "TimeInSeconds",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Format time in seconds to HH:MM:SS.000, including milliseconds.",
+          "fullName": "Format time in seconds to HH:MM:SS.000",
+          "functionType": "StringExpression",
+          "name": "SecondsToHHMMSS000",
+          "sentence": "Format time _PARAM1_ to HH:MM:SS in _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "var format_time = function (time_second) {\r",
+                "    date = new Date(null);\r",
+                "    date.setMilliseconds(1000*time_second);\r",
+                "    if (time_second >= 3600) {\r",
+                "        return date.toISOString().substr(11, 12); // MM:SS.000\r",
+                "    } else {\r",
+                "        return date.toISOString().substr(14, 9); // HH:MM:SS.000\r",
+                "    }\r",
+                "}\r",
+                "\r",
+                "eventsFunctionContext.returnValue = format_time(eventsFunctionContext.getArgument(\"TimeInSeconds\"));"
+              ],
+              "parameterObjects": "",
+              "useStrict": false,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "expressionType": {
+            "type": "string"
+          },
+          "parameters": [
+            {
+              "description": "Time, in seconds",
+              "name": "TimeInSeconds",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "",
+      "category": "User interface",
+      "extensionNamespace": "",
+      "fullName": "Clock",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLWNsb2NrLXRpbWUtZWlnaHQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMkM2LjUgMiAyIDYuNSAyIDEyQzIgMTcuNSA2LjUgMjIgMTIgMjJDMTcuNSAyMiAyMiAxNy41IDIyIDEyUzE3LjUgMiAxMiAyTTcuNyAxNS41TDcgMTQuMkwxMSAxMS45VjdIMTIuNVYxMi44TDcuNyAxNS41WiIgLz48L3N2Zz4=",
+      "name": "Clock",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/clock-time-eight.svg",
+      "shortDescription": "Add clocks into your game.",
+      "version": "0.4.0",
+      "description": [
+        "Add clocks to your game with ease including",
+        "",
+        "    12 - hour time",
+        "    24 - hour time",
+        "    English date",
+        "    Numeral date",
+        "."
+      ],
+      "origin": {
+        "identifier": "Clock",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "clock",
+        "time",
+        "date",
+        "month",
+        "year",
+        "javascript"
+      ],
+      "authorIds": [
+        "N4sZ052zwPVw6Y9n4y9yfRF8ilA2"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [
+        {
+          "description": "Modify text to display year.",
+          "fullName": "Year",
+          "functionType": "Expression",
+          "name": "YearFunction",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "//Getting year values from device\r",
+                "const d = new Date();\r",
+                "var y = d.getFullYear();\r",
+                "\r",
+                "eventsFunctionContext.returnValue = y"
+              ],
+              "parameterObjects": "",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [],
+          "objectGroups": []
+        },
+        {
+          "description": "Modify text to display time in 12 - Hour format.",
+          "fullName": "Time",
+          "functionType": "Expression",
+          "name": "TwelveHour",
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "24- Hour time"
+            },
+            {
+              "type": "BuiltinCommonInstructions::JsCode",
+              "inlineCode": [
+                "const d = new Date();",
+                "var hour = d.getHours();",
+                "",
+                "if (hour > 12){",
+                "    hour -= 12",
+                "};",
+                "",
+                "eventsFunctionContext.returnValue = hour"
+              ],
+              "parameterObjects": "Object",
+              "useStrict": true,
+              "eventsSheetExpanded": false
+            }
+          ],
+          "expressionType": {
+            "type": "expression"
+          },
+          "parameters": [],
+          "objectGroups": []
+        }
+      ],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Modify a text object to display the time.",
+          "fullName": "Time",
+          "name": "Time",
+          "objectType": "TextObject::Text",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "__Clock.Hour",
+                        "=",
+                        "Time(\"hour\")"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "__Clock.Minutes",
+                        "=",
+                        "Time(\"min\")"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "__Clock.Seconds",
+                        "=",
+                        "Time(\"sec\")"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "__Clock.Minutes",
+                        "<",
+                        "10"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "__Clock.Minutes",
+                        "=",
+                        "\"0\" + ToString(Time(\"min\"))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "__Clock.Seconds",
+                        "<",
+                        "10"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarSceneTxt"
+                      },
+                      "parameters": [
+                        "__Clock.Seconds",
+                        "=",
+                        "\"0\" + ToString(Time(\"sec\"))"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "24- Hour time"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Property",
+                        "=",
+                        "\"24 - Hour\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "Object",
+                            "=",
+                            "VariableString(__Clock.Hour) + \":\" + VariableString(__Clock.Minutes) + \":\" + VariableString(__Clock.Seconds)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "12 - Hour time"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Property",
+                        "=",
+                        "\"12 - Hour\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarScene"
+                          },
+                          "parameters": [
+                            "__Clock.Hour",
+                            ">",
+                            "12"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "__Clock.Hour",
+                            "-",
+                            "12"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "TextObject::String"
+                          },
+                          "parameters": [
+                            "Object",
+                            "=",
+                            "VariableString(__Clock.Hour) + \":\" + VariableString(__Clock.Minutes) + \":\" + VariableString(__Clock.Seconds)"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "TextObject::Text",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Clock::Time",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Choice",
+              "label": "Display time in the format of:",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "12 - Hour",
+                "24 - Hour"
+              ],
+              "name": "Property"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "Modify a text object to display the date.",
+          "fullName": "Date",
+          "name": "Date",
+          "objectType": "TextObject::Text",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Property",
+                        "=",
+                        "\"Words\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Word",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "VariableString(__Clock.DayOfTheWeek) + \" \" + VariableString(__Clock.DayOfTheMonth) + \" \" +  VariableString(__Clock.MonthOfTheYear)"
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Day Of The Week",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "Time(\"wday\")"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Mon\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Tue\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "3"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Wed\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "4"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Thu\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "5"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Fri\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetDayOfTheWeek",
+                                    "=",
+                                    "6"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheWeek",
+                                    "=",
+                                    "\"Sat\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Month Of The Year",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "Time(\"mon\")"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "0"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Jan\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Feb\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Mar\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "3"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Apr\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "4"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"May\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "5"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Jun\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "6"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Jul\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "7"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Aug\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "8"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Sep\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "9"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Oct\n\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "10"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Nov\""
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "VarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.GetMonthOfTheYear",
+                                    "=",
+                                    "11"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarSceneTxt"
+                                  },
+                                  "parameters": [
+                                    "__Clock.MonthOfTheYear",
+                                    "=",
+                                    "\"Dec\""
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        },
+                        {
+                          "colorB": 228,
+                          "colorG": 176,
+                          "colorR": 74,
+                          "creationTime": 0,
+                          "name": "Day Of The Month",
+                          "source": "",
+                          "type": "BuiltinCommonInstructions::Group",
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "ModVarScene"
+                                  },
+                                  "parameters": [
+                                    "__Clock.DayOfTheMonth",
+                                    "=",
+                                    "Time(\"mday\")"
+                                  ]
+                                }
+                              ]
+                            }
+                          ],
+                          "parameters": []
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "StringVariable"
+                      },
+                      "parameters": [
+                        "Property",
+                        "=",
+                        "\"Numbers\""
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "colorB": 228,
+                      "colorG": 176,
+                      "colorR": 74,
+                      "creationTime": 0,
+                      "name": "Numbers",
+                      "source": "",
+                      "type": "BuiltinCommonInstructions::Group",
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "TextObject::String"
+                              },
+                              "parameters": [
+                                "Object",
+                                "=",
+                                "ToString(Time(\"wday\")) + \"/\" + ToString(Time(\"mon\")) + \"/\" + ToString(Clock::YearFunction())"
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "parameters": []
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "TextObject::Text",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Clock::Date",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "",
+              "type": "Choice",
+              "label": "Display date in the format of:",
+              "description": "",
+              "group": "",
+              "extraInformation": [
+                "Words",
+                "Numbers"
+              ],
+              "name": "Property"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        },
+        {
+          "description": "Modify a text object to display the year.",
+          "fullName": "Year",
+          "name": "Year",
+          "objectType": "TextObject::Text",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPreEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Display year"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "TextObject::String"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "ToString(Clock::YearFunction())"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "supplementaryInformation": "TextObject::Text",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "Clock::Year",
                   "type": "behavior"
                 }
               ],
