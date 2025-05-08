@@ -11000,7 +11000,7 @@
       "string": "00:00",
       "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
       "textAlignment": "center",
-      "characterSize": 20,
+      "characterSize": 18,
       "color": {
         "b": 255,
         "g": 255,
@@ -11024,7 +11024,7 @@
         "font": "1bee9bddf3765d016ea29c21d418cdb0e958d1cd9c0aaa8743f9e174cb486e71_Kenney Pixel Square.ttf",
         "textAlignment": "center",
         "verticalTextAlignment": "top",
-        "characterSize": 20,
+        "characterSize": 18,
         "color": "255;255;255"
       }
     }
@@ -11690,6 +11690,20 @@
       "name": "BossAlive",
       "type": "string",
       "value": "0"
+    },
+    {
+      "name": "timeformat",
+      "type": "array",
+      "children": [
+        {
+          "type": "number",
+          "value": 0
+        },
+        {
+          "type": "number",
+          "value": 0
+        }
+      ]
     }
   ],
   "layouts": [
@@ -12147,6 +12161,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -12180,7 +12198,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 1.5804687500003067,
+        "zoomFactor": 0.8700232859858996,
         "windowMask": false
       },
       "objectsGroups": [
@@ -12413,6 +12431,11 @@
               "value": "I’m sorry, Quakehart. But I have no choice... I will free you, even if it means breaking my own heart."
             }
           ]
+        },
+        {
+          "name": "currentseconds",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -13150,7 +13173,7 @@
           "name": "ProfileHandle",
           "persistentUuid": "0341fdc4-6e50-4254-a972-4650eae70106",
           "width": 80,
-          "x": 16,
+          "x": -1,
           "y": 48,
           "zOrder": 24,
           "numberProperties": [],
@@ -13166,8 +13189,8 @@
           "layer": "UI",
           "name": "healthbar",
           "persistentUuid": "8be40176-be59-4c0c-961d-24805465929b",
-          "width": 256,
-          "x": 64,
+          "width": 268,
+          "x": 44,
           "y": 80,
           "zOrder": 23,
           "numberProperties": [],
@@ -13184,7 +13207,7 @@
           "name": "icon",
           "persistentUuid": "9738fe12-c48e-4d90-aa71-8b1c469e2967",
           "width": 48,
-          "x": 32,
+          "x": 15,
           "y": 64,
           "zOrder": 25,
           "numberProperties": [],
@@ -13267,8 +13290,8 @@
           "layer": "UI",
           "name": "charname_",
           "persistentUuid": "2b3a4568-455b-42de-8cdb-092f1dbe61ba",
-          "width": 190,
-          "x": 96,
+          "width": 123,
+          "x": 76,
           "y": 75,
           "zOrder": 30,
           "numberProperties": [],
@@ -13348,7 +13371,7 @@
           "name": "pausebutton",
           "persistentUuid": "4604b5a4-ccd9-4f3d-bca9-de3b423da4f9",
           "width": 48,
-          "x": 32,
+          "x": 12,
           "y": 128,
           "zOrder": 32,
           "numberProperties": [],
@@ -13365,7 +13388,7 @@
           "name": "icon2",
           "persistentUuid": "6900a8de-1e79-4bf4-bd22-36532e5ecf3f",
           "width": 32,
-          "x": 40,
+          "x": 20,
           "y": 135,
           "zOrder": 33,
           "numberProperties": [],
@@ -14496,6 +14519,23 @@
               "value": 1
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 24,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "timealive",
+          "persistentUuid": "d41d9ca6-0532-4e7c-9dd4-878fee9f2189",
+          "width": 83,
+          "x": 217,
+          "y": 62,
+          "zOrder": 61,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -23861,7 +23901,7 @@
                     "Scoreholder",
                     "Text",
                     "=",
-                    "ToString(round(Total_Secs_Alive))+ \" Secs\""
+                    "TimeFormatter::SecondsToHHMMSS(round(Total_Secs_Alive))"
                   ]
                 }
               ]
@@ -24073,6 +24113,25 @@
                 "FireBoss",
                 "=",
                 "Player.ZOrder()"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "timealive",
+                    "Text",
+                    "=",
+                    "TimeFormatter::SecondsToHHMMSS(TimerElapsedTime(\"playerlife_Seconds\"))"
+                  ]
+                }
               ]
             }
           ]
@@ -31474,6 +31533,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -35880,6 +35943,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -36492,6 +36559,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time"
         },
         {
           "name": "TopDownMovement",
@@ -37107,6 +37178,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time"
         },
         {
           "name": "TopDownMovement",
@@ -37739,6 +37814,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -37772,7 +37851,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.28172599320797514,
+        "zoomFactor": 1.21216419721745,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -38833,7 +38912,7 @@
           "name": "ProfileHandle",
           "persistentUuid": "f3cd2193-e1ca-4090-9bd2-82db836640c6",
           "width": 80,
-          "x": 14,
+          "x": 2,
           "y": 54,
           "zOrder": 24,
           "numberProperties": [],
@@ -38849,8 +38928,8 @@
           "layer": "UI",
           "name": "healthbar",
           "persistentUuid": "2e07f4ad-23e1-4e4e-982f-6bcbf237358b",
-          "width": 256,
-          "x": 62,
+          "width": 269,
+          "x": 50,
           "y": 86,
           "zOrder": 23,
           "numberProperties": [],
@@ -38867,7 +38946,7 @@
           "name": "icon",
           "persistentUuid": "5c891f50-2650-46fb-b2ac-16c8d1d05219",
           "width": 48,
-          "x": 30,
+          "x": 18,
           "y": 70,
           "zOrder": 25,
           "numberProperties": [],
@@ -38933,8 +39012,8 @@
           "layer": "UI",
           "name": "charname_",
           "persistentUuid": "f9d5b2bb-bdb1-4f71-b35b-8ae18a764061",
-          "width": 190,
-          "x": 94,
+          "width": 151,
+          "x": 82,
           "y": 81,
           "zOrder": 30,
           "numberProperties": [],
@@ -39014,7 +39093,7 @@
           "name": "pausebutton",
           "persistentUuid": "5525e0c4-c97c-4292-91b2-45ff15c9a426",
           "width": 48,
-          "x": 30,
+          "x": 18,
           "y": 134,
           "zOrder": 32,
           "numberProperties": [],
@@ -39031,7 +39110,7 @@
           "name": "icon2",
           "persistentUuid": "1ea15f7e-4b95-4c8e-89d8-fe1c4bc374ec",
           "width": 32,
-          "x": 38,
+          "x": 26,
           "y": 141,
           "zOrder": 33,
           "numberProperties": [],
@@ -40263,6 +40342,23 @@
           "x": 367,
           "y": 66,
           "zOrder": 70,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 24,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "timealive",
+          "persistentUuid": "4d81e542-ccd7-47c6-926f-d7a01abb5d3b",
+          "width": 83,
+          "x": 227,
+          "y": 69,
+          "zOrder": 61,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -45706,6 +45802,17 @@
                 "=",
                 "Player.ZOrder()"
               ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "timealive",
+                "Text",
+                "=",
+                "TimeFormatter::SecondsToHHMMSS(TimerElapsedTime(\"playerlife_Seconds\"))"
+              ]
             }
           ]
         },
@@ -45954,7 +46061,7 @@
                     "Scoreholder",
                     "Text",
                     "=",
-                    "ToString(round(Total_Secs_Alive))+ \" Secs\""
+                    "TimeFormatter::SecondsToHHMMSS(round(Total_Secs_Alive))"
                   ]
                 }
               ]
@@ -46317,6 +46424,7 @@
           "colorG": 16,
           "colorR": 23,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemy Spawning",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -46615,6 +46723,7 @@
               ]
             },
             {
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -47226,6 +47335,7 @@
           "colorG": 59,
           "colorR": 126,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemy AI",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -50031,6 +50141,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -50064,7 +50178,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.47893418845353236,
+        "zoomFactor": 0.6897782140104611,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -50235,7 +50349,7 @@
           "name": "ProfileHandle",
           "persistentUuid": "cb7b6807-c189-4eef-b0c9-8111d3dc8184",
           "width": 80,
-          "x": 19,
+          "x": 1,
           "y": 55,
           "zOrder": 24,
           "numberProperties": [],
@@ -50251,8 +50365,8 @@
           "layer": "UI",
           "name": "healthbar",
           "persistentUuid": "75741ed0-7c60-49e2-a9d8-9b715452ff8c",
-          "width": 256,
-          "x": 67,
+          "width": 265,
+          "x": 47,
           "y": 87,
           "zOrder": 23,
           "numberProperties": [],
@@ -50269,7 +50383,7 @@
           "name": "icon",
           "persistentUuid": "384c3c64-6e15-40c8-8929-3f7e27be003a",
           "width": 48,
-          "x": 35,
+          "x": 17,
           "y": 71,
           "zOrder": 25,
           "numberProperties": [],
@@ -50336,8 +50450,8 @@
           "layer": "UI",
           "name": "charname_",
           "persistentUuid": "4591ef9e-f059-47fe-9e62-3dc02836284e",
-          "width": 190,
-          "x": 99,
+          "width": 121,
+          "x": 81,
           "y": 82,
           "zOrder": 30,
           "numberProperties": [],
@@ -50417,7 +50531,7 @@
           "name": "pausebutton",
           "persistentUuid": "a0e46320-9a53-4b70-be17-e8de18530777",
           "width": 48,
-          "x": 35,
+          "x": 17,
           "y": 135,
           "zOrder": 32,
           "numberProperties": [],
@@ -50434,7 +50548,7 @@
           "name": "icon2",
           "persistentUuid": "62870400-60d0-4940-8613-b6f5e836bdfe",
           "width": 32,
-          "x": 43,
+          "x": 25,
           "y": 142,
           "zOrder": 33,
           "numberProperties": [],
@@ -51355,6 +51469,23 @@
           "x": 801,
           "y": 368,
           "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 24,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "timealive",
+          "persistentUuid": "cc1b9d8f-a177-4211-82c3-c2202e875d31",
+          "width": 83,
+          "x": 222,
+          "y": 69,
+          "zOrder": 61,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -53893,6 +54024,76 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Gamestate\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "GamePause",
+                    "False",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Gamestate\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "UnPauseTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"playerlife_Seconds\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
                     "value": "CollisionNP"
                   },
                   "parameters": [
@@ -53930,6 +54131,17 @@
                     "=",
                     "Finalboss.stats.health",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "timealive",
+                    "Text",
+                    "=",
+                    "TimeFormatter::SecondsToHHMMSS(TimerElapsedTime(\"playerlife_Seconds\"))"
                   ]
                 }
               ]
@@ -54904,6 +55116,7 @@
           "colorG": 61,
           "colorR": 43,
           "creationTime": 0,
+          "folded": true,
           "name": "FinalBoss",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -57123,6 +57336,10 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
+          "name": "Time",
+          "type": "Clock::Time"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         },
@@ -57797,6 +58014,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time"
         },
         {
           "name": "TopDownMovement",
@@ -60182,6 +60403,10 @@
         {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Time",
+          "type": "Clock::Time"
         },
         {
           "name": "TopDownMovement",
